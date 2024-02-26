@@ -5,14 +5,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:testing-library/react",
-    "plugin:jest-dom/recommended",
-    "next",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": ["./tsconfig.json"]
@@ -28,7 +21,7 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   },
-  "plugins": ["@typescript-eslint", "import", "unused-imports", "prettier"],
+  "plugins": ["@typescript-eslint", "import", "prettier"],
   "rules": {
     "prefer-const": "error",
     "no-empty-function": "error",
@@ -40,8 +33,6 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@next/next/no-image-element": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": ["warn", { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }],
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": "const", "next": "return" },
