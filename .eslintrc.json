@@ -1,15 +1,29 @@
 {
   "root": false,
   "env": {
-    "node": true,
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "next", "plugin:react/recommended"],
+  "overrides": [
+    {
+      "env": {
+        "node": true
+      },
+      "files": [".eslintrc.{js,cjs}"],
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
+  "plugins": ["@typescript-eslint", "react", "unused-imports", "import"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -21,18 +35,29 @@
       "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   },
-  "plugins": ["@typescript-eslint", "import", "prettier"],
   "rules": {
     "prefer-const": "error",
     "no-empty-function": "error",
     "no-unused-vars": "off",
     "no-extra-semi": "warn",
     "no-console": "warn",
+    "no-global-assign": "off",
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-inferrable-types": "off",
-    "@next/next/no-image-element": "off",
+    "@next/next/no-img-element": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": "const", "next": "return" },
