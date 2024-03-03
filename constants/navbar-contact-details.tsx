@@ -1,7 +1,7 @@
 import { Mail, Phone } from 'lucide-react';
 
 import { FacebookIcon } from '@/icons/facebook';
-import { ContactDetail } from '@/types/interface/contact-detail';
+import { ContactDetail } from '@/types/interfaces/contact-detail';
 
 export const navbarContactDetails: ContactDetail[] = [
   {
