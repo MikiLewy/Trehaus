@@ -1,4 +1,4 @@
-import { ButtonSize, ButtonVariant } from '@/components/atoms/button/button';
+import { ButtonVariant } from '@/components/atoms/button/button';
 
 export const getVariant = (variant: ButtonVariant) => {
   switch (variant) {
@@ -8,18 +8,5 @@ export const getVariant = (variant: ButtonVariant) => {
       return `btn-outlined`;
     default:
       return 'btn-contained';
-  }
-};
-
-export const getSize = (size: ButtonSize) => {
-  switch (size) {
-    case 'sm':
-      return 'btn-sm';
-    case 'md':
-      return 'btn-md';
-    case 'lg':
-      return 'btn-lg';
-    default:
-      return 'btn-md';
   }
 };

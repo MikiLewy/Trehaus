@@ -19,6 +19,9 @@ const config: Config = {
           DEFAULT: '#F2E2E2',
         },
       },
+      backgroundImage: {
+        hero: "url('/hero.webp')",
+      },
     },
   },
   plugins: [],

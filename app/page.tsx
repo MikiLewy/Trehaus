@@ -1,3 +1,9 @@
+import Hero from '@/components/organisms/home/hero/hero';
+
 export default function Home() {
-  return <main className="flex min-h-screen flex-col items-center justify-between"></main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
