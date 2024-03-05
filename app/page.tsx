@@ -1,4 +1,5 @@
 import AboutUs from '@/components/organisms/home/about-us/about-us';
+import CompanyShowcase from '@/components/organisms/home/company-showcase/company-showcase';
 import Hero from '@/components/organisms/home/hero/hero';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <AboutUs />
+      <CompanyShowcase />
     </main>
   );
 }
