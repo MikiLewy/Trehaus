@@ -83,7 +83,7 @@ const ClientNavbar = () => {
               exit="hide"
               className="fixed top-0 left-0 right-0 bottom-0 w-full bg-white pt-20 flex flex-col justify-start">
               <motion.ul
-                className="flex flex-col gap-6 px-4"
+                className="flex flex-col gap-6 px-4 mb-10"
                 variants={{
                   hide: {
                     opacity: 0,

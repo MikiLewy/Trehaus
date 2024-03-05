@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -16,9 +17,10 @@ interface Props extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLB
   fullWidth?: boolean;
   loading?: boolean;
   children: ReactNode;
+  href?: string;
 }
 
-const Button = ({ className, startIcon, endIcon, loading, disabled, children, variant = 'contained', fullWidth, ...rest }: Props) => {
+const Button = ({ className, href, startIcon, endIcon, loading, disabled, children, variant = 'contained', fullWidth, ...rest }: Props) => {
   const merged = twMerge('btn', getVariant(variant), disabled && 'btn-disabled', fullWidth && 'w-full', className);
 
   return (
@@ -28,6 +30,12 @@ const Button = ({ className, startIcon, endIcon, loading, disabled, children, va
           Ładowanie...
           <SpinnerIcon className="motion-reduce:hidden inline w-4 h-4 animate-spin" />
         </>
+      ) : href ? (
+        <Link href={href}>
+          {startIcon}
+          {children}
+          {endIcon}
+        </Link>
       ) : (
         <>
           {startIcon}

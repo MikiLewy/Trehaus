@@ -21,6 +21,8 @@ const config: Config = {
       },
       backgroundImage: {
         hero: "url('/hero.webp')",
+        companyShowcaseOffer: "url('/bilbo.webp')",
+        companyShowcaseImplementation: "url('/bilbo-implementation.webp')",
       },
     },
   },

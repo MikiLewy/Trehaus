@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
 import Button from '@/components/atoms/button/button';
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen lg:h-[70vh] relative flex items-center justify-start">
+    <div className="w-full h-[75vh] lg:h-[70vh] relative flex items-center justify-start">
       <div className="absolute inset-0 bg-hero bg-cover bg-no-repeat bg-center"> </div>
       <div className="absolute inset-0 z-10 bg-black/65 " />
       <div className="relative z-20 content-container">
@@ -13,9 +11,9 @@ const Hero = () => {
             Budownictwo energooszczędne, konstrukcje drewniane
           </h1>
           <p className="text-sm text-white/90 lg:text-base xl:text-lg font-normal">Ponad 20 lat doświadczenia nabytego w pracy w Skandynawii</p>
-          <Link href={'/oferta'}>
-            <Button className="self-start mt-2">Sprawdź ofertę</Button>
-          </Link>
+          <Button href="/oferta" className="self-start mt-2">
+            Sprawdź ofertę
+          </Button>
         </div>
       </div>
     </div>

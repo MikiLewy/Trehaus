@@ -10,7 +10,7 @@ import ClientNavbar from './navbar.client';
 
 const ServerNavbar = async () => {
   return (
-    <nav className="sticky top-0 bg-white z-50">
+    <nav className="sticky top-0 bg-white z-50 border-b border-black/20">
       <div className="flex items-center justify-between py-6 lg:py-8 content-container">
         <Link href={'/'}>
           <Image src={logo} alt="Trehaus logo" className="relative cursor-pointer z-10 w-24 xl:w-32 " />
