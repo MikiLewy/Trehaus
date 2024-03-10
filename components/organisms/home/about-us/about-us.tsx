@@ -5,7 +5,7 @@ import SectionTitle from '@/components/atoms/section-title/section-title';
 
 const AboutUs = () => {
   return (
-    <section className="content-container py-6 md:py-10 lg:py-15 xl:py-20 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-2 ">
+    <section className="content-container vertical-section-spacing flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-2 ">
       <div className="flex flex-col gap-2 xl:gap-4 basis-1/2 xl:basis-[45%]">
         <SectionTitle>Poznaj nas bliżej</SectionTitle>
         <p className="text-sm xl:text-base max-w-[500px] xl:max-w-[600px]">
