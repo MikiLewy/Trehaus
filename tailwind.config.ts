@@ -19,6 +19,10 @@ const config: Config = {
           DEFAULT: '#F2E2E2',
         },
       },
+      backgroundImage: {
+        footer: "url('/footer.webp')",
+        footer_pattern: "url('/papyrus-dark-pattern.svg')",
+      },
     },
   },
   plugins: [],

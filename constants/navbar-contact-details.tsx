@@ -3,23 +3,25 @@ import { Mail, Phone } from 'lucide-react';
 import { FacebookIcon } from '@/icons/facebook';
 import { ContactDetail } from '@/types/interfaces/contact-detail';
 
+import { FACEBOOK_URL, PHONE_NUMBER, EMAIL } from './contact';
+
 export const navbarContactDetails: ContactDetail[] = [
   {
     key: 'email',
-    text: 'biuro.trehaus@gmail.com',
+    text: EMAIL,
     icon: <Mail className="w-4" />,
-    href: 'mailto:biuro.trehaus@gmail.com',
+    href: `mailto:${EMAIL}`,
   },
   {
     key: 'phone',
-    text: '123456789',
+    text: PHONE_NUMBER,
     icon: <Phone className="w-4" />,
-    href: 'tel:+48123456789',
+    href: `tel:${PHONE_NUMBER}`,
   },
   {
     key: 'facebook',
     text: 'Facebook',
     icon: <FacebookIcon className="w-4" />,
-    href: 'https://www.facebook.com/profile.php?id=100077756584897',
+    href: FACEBOOK_URL,
   },
 ];
