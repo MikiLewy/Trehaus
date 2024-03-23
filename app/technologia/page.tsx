@@ -1,7 +1,9 @@
+import PageHeader from '@/components/atoms/page-header/page-header';
+
 const Technology = () => {
   return (
     <main>
-      <h2>Technologia</h2>
+      <PageHeader>Technologia</PageHeader>
     </main>
   );
 };
