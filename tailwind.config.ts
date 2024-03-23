@@ -14,12 +14,14 @@ const config: Config = {
           DEFAULT: '#6A8A86',
           hover: '#495F5C',
           focus: '#425653',
+          darker: '#495F5C',
         },
         secondary: {
           DEFAULT: '#F2E2E2',
         },
       },
       backgroundImage: {
+        hero: "url('/hero.webp')",
         footer: "url('/footer.webp')",
         footer_pattern: "url('/papyrus-dark-pattern.svg')",
       },
