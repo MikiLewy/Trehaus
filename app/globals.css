@@ -12,7 +12,7 @@
 }
 
 .btn {
-  @apply flex items-center justify-center gap-2 text-sm py-2 px-4 md:px-6 xl:py-3 xl:px-7  text-black rounded-lg font-medium transition-colors;
+  @apply flex items-center justify-center gap-2 text-sm py-2 px-4 md:px-6 xl:py-3 xl:px-7 xl:text-base text-black rounded-lg font-medium transition-colors;
   & svg {
     @apply w-3 h-3 md:w-3.5 md:h-3.5;
   }

@@ -28,21 +28,25 @@ const CompanyShowcase = () => {
     <section className="relative min-h-[550px] flex lg:bg-[url('/company-showcase.png')] bg-center bg-cover">
       <div className="absolute inset-0 z-10 bg-black/65" />
       <div className="relative inset-0 lg:content-container flex flex-col lg:flex-row w-full">
-        {companyShowcase.map(({ key, button, description, href, bgImage, title }) => (
-          <div
-            key={key}
-            style={{ '--image-url': `url('${bgImage}');` } as CSSProperties}
-            className={`relative bg-center bg-[image:var(--image-url)] bg-cover min-h-[300px] flex lg:basis-1/2 lg:p-0 lg:bg-none`}>
+        {companyShowcase.map(
+          ({ key, button, description, href, bgImage, title }) => (
             <div
-              className={`relative inset-0 z-20 flex flex-col items-start justify-center gap-2 py-6 lg:py-10 xl:py-14 content-container ${key === 'oferta' ? 'lg:px-0' : ''} `}>
-              <SectionTitle className="text-white">{title}</SectionTitle>
-              <p className="text-white/90 text-sm lg:text-base">{description}</p>
-              <Button href={href} className="mt-2">
-                {button}
-              </Button>
+              key={key}
+              style={{ '--image-url': `url('${bgImage}');` } as CSSProperties}
+              className={`relative bg-center bg-[image:var(--image-url)] bg-cover min-h-[300px] flex lg:basis-1/2 lg:p-0 lg:bg-none`}>
+              <div
+                className={`relative inset-0 z-20 flex flex-col items-start justify-center gap-2 py-6 lg:py-10 xl:py-14 content-container ${key === 'oferta' ? 'lg:px-0' : ''} `}>
+                <SectionTitle className="text-white">{title}</SectionTitle>
+                <p className="text-white/90 text-sm lg:text-base">
+                  {description}
+                </p>
+                <Button href={href} className="mt-2">
+                  {button}
+                </Button>
+              </div>
             </div>
-          </div>
-        ))}
+          ),
+        )}
       </div>
     </section>
   );
