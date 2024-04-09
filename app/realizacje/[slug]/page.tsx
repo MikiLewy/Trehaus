@@ -1,3 +1,4 @@
+import GoBackButton from '@/components/atoms/go-back-button/go-back-button';
 import PageHeader from '@/components/atoms/page-header/page-header';
 
 interface Props {
@@ -8,6 +9,7 @@ const RealizationDetails = ({ params }: Props) => {
   return (
     <main>
       <PageHeader>Realizacja {params.slug} </PageHeader>
+      <GoBackButton href="/realizacje" />
     </main>
   );
 };
