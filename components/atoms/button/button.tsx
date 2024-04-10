@@ -9,7 +9,11 @@ import { getVariant } from '@/utils/button';
 
 export type ButtonVariant = 'contained' | 'outlined';
 
-interface Props extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface Props
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   variant?: ButtonVariant;
   disabled?: boolean;
   startIcon?: ReactNode;
@@ -20,22 +24,50 @@ interface Props extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLB
   href?: string;
 }
 
-const Button = ({ className, href, startIcon, endIcon, loading, disabled, children, variant = 'contained', fullWidth, ...rest }: Props) => {
-  const merged = twMerge('btn', getVariant(variant), disabled && 'btn-disabled', fullWidth && 'w-full', className);
+const Button = ({
+  className,
+  href,
+  startIcon,
+  endIcon,
+  loading,
+  disabled,
+  children,
+  variant = 'contained',
+  fullWidth,
+  ...rest
+}: Props) => {
+  const merged = twMerge(
+    'btn',
+    getVariant(variant),
+    disabled && 'btn-disabled',
+    fullWidth && 'w-full',
+    className,
+  );
 
-  return (
+  return href ? (
+    <Link href={href}>
+      <button className={merged} disabled={disabled} {...rest}>
+        {loading ? (
+          <>
+            Ładowanie...
+            <SpinnerIcon className="motion-reduce:hidden inline w-4 h-4 animate-spin" />
+          </>
+        ) : (
+          <>
+            {startIcon}
+            {children}
+            {endIcon}
+          </>
+        )}
+      </button>
+    </Link>
+  ) : (
     <button className={merged} disabled={disabled} {...rest}>
       {loading ? (
         <>
           Ładowanie...
           <SpinnerIcon className="motion-reduce:hidden inline w-4 h-4 animate-spin" />
         </>
-      ) : href ? (
-        <Link href={href}>
-          {startIcon}
-          {children}
-          {endIcon}
-        </Link>
       ) : (
         <>
           {startIcon}
