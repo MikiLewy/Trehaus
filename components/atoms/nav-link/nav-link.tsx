@@ -10,7 +10,7 @@ interface Props {
 const NavLink = ({ title, href }: Props) => {
   const pathname = usePathname();
 
-  const isActive = pathname === href;
+  const isActive = pathname.includes(href);
 
   return (
     <Link
