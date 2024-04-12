@@ -5,7 +5,10 @@ import './globals.css';
 import Footer from '@/components/organisms/footer/footer';
 import Navbar from '@/components/organisms/navbar';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Trehaus',

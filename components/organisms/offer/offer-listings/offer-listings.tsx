@@ -1,5 +1,5 @@
 import OfferCard from '@/components/atoms/offer-card/offer-card';
-import { offerListings } from '@/constants/offer-listings';
+import { offerListings } from '@/features/offer-details/mocks/offer-listings';
 
 const OfferListings = () => {
   return (

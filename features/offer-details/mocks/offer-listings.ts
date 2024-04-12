@@ -2,8 +2,9 @@ export const offerListings = [
   {
     key: 'svale',
     title: 'Svale',
-    description: 'Lorem ipsum lorem ipsum lorem ispum lorem ipsum lorem ipssume lorem ipsum lorem ipsum',
-    buttonHref: '/offer/:id',
+    description:
+      'Lorem ipsum lorem ipsum lorem ispum lorem ipsum lorem ipssume lorem ipsum lorem ipsum',
+    buttonHref: '/oferta/sosenka',
     img: {
       alt: 'Svale',
       src: '/bilbo.webp',
@@ -14,7 +15,7 @@ export const offerListings = [
     key: 'dummy1',
     title: 'Dummy Listing 1',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    buttonHref: '/offer/:id',
+    buttonHref: '/oferta/richard',
     img: {
       alt: 'Dummy Listing 1',
       src: '/bilbo.webp',
@@ -25,7 +26,7 @@ export const offerListings = [
     key: 'dummy2',
     title: 'Dummy Listing 2',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    buttonHref: '/offer/:id',
+    buttonHref: '/oferta/richard',
     img: {
       alt: 'Dummy Listing 2',
       src: '/bilbo.webp',
@@ -36,7 +37,7 @@ export const offerListings = [
     key: 'dummy3',
     title: 'Dummy Listing 3',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    buttonHref: '/offer/:id',
+    buttonHref: '/oferta/richard',
     img: {
       alt: 'Dummy Listing 3',
       src: '/bilbo.webp',
@@ -47,7 +48,7 @@ export const offerListings = [
     key: 'dummy4',
     title: 'Dummy Listing 4',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    buttonHref: '/offer/:id',
+    buttonHref: '/oferta/richard',
     img: {
       alt: 'Dummy Listing 4',
       src: '/bilbo.webp',
@@ -58,7 +59,7 @@ export const offerListings = [
     key: 'dummy5',
     title: 'Dummy Listing 5',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    buttonHref: '/offer/:id',
+    buttonHref: '/oferta/richard',
     img: {
       alt: 'Dummy Listing 5',
       src: '/bilbo.webp',
