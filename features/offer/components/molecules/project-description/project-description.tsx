@@ -2,6 +2,7 @@
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 
 // TODO PASS DYNAMIC DATA
@@ -16,7 +17,7 @@ const ProjectDescription = ({ slug }: Props) => {
   console.log(data);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <TextSkeleton />;
   }
 
   if (!data) {

@@ -6,19 +6,16 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
 interface Props {
+  title: string;
+  description: string;
   data: {
     id: number;
     title: string;
-    description: string;
-    rows: {
-      id: number;
-      title: string;
-      includes: boolean;
-    }[];
-  };
+    value: boolean;
+  }[];
 }
 
-const AccordionItem = ({ data }: Props) => {
+const AccordionItem = ({ title, description, data }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,8 +25,8 @@ const AccordionItem = ({ data }: Props) => {
           className="flex flex-row items-center justify-between py-2"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
           <div className="flex flex-col">
-            <h4 className="text-lg font-medium lg:text-2xl">{data.title}</h4>
-            <p className="text-sm lg:text-base">{data.description}</p>
+            <h4 className="text-lg font-medium lg:text-2xl">{title}</h4>
+            <p className="text-sm lg:text-base">{description}zł</p>
           </div>
           <motion.div
             animate={isOpen ? 'show' : 'hide'}
@@ -56,15 +53,15 @@ const AccordionItem = ({ data }: Props) => {
               }}
               transition={{ duration: 0.3 }}
               className="flex flex-col gap-2">
-              {data.rows.map((row, index) => (
+              {data?.map((row, index) => (
                 <div
                   key={row.id}
-                  className={`flex items-center justify-between py-2 pl-2 pr-4 gap-2 ${index % 2 === 0 ? 'bg-gray-200' : 'bg-white'}`}>
+                  className={`flex items-center justify-between py-2 pl-2 pr-4 gap-2 mb-2 ${index % 2 === 0 ? 'bg-gray-200' : 'bg-white'}`}>
                   <p className="text-sm">{row.title}</p>
-                  {row.includes ? (
-                    <CheckCircle2 size={22} />
+                  {row.value ? (
+                    <CheckCircle2 size={22} className="min-w-max" />
                   ) : (
-                    <Minus size={22} />
+                    <Minus size={22} className="min-w-max" />
                   )}
                 </div>
               ))}
@@ -72,7 +69,7 @@ const AccordionItem = ({ data }: Props) => {
           )}
         </AnimatePresence>
       </div>
-      <div className="w-full mt-2 h-px bg-gray-200" />
+      <div className="w-full my-2 h-px bg-gray-200" />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
+import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 
 interface Props {
@@ -16,7 +17,7 @@ const PhotosGallery = ({ slug }: Props) => {
   const { data, isLoading } = useOffer(slug);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <ImageSkeleton />;
   }
 
   if (!data) {

@@ -1,6 +1,6 @@
 import { Asset, EntryFields } from 'contentful';
 
-interface KeyValuePair {
+export interface KeyValuePair {
   id: string;
   key: string;
   value: string;
@@ -18,5 +18,7 @@ export interface Offer {
     thumbnails: Asset[];
     details: KeyValuePair[];
     finishingStandards: KeyValuePair[];
+    groundFloorImage: Asset;
+    groundFloorDetails: KeyValuePair[];
   };
 }

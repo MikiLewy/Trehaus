@@ -2,6 +2,7 @@
 
 import Button from '@/components/atoms/button/button';
 import PageTitle from '@/components/atoms/page-title/page-title';
+import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 
 import DetailsTitle from '../../atoms/details-title/details-title';
@@ -16,7 +17,7 @@ const ProjectDetails = ({ slug }: Props) => {
   console.log(data);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <TextSkeleton />;
   }
 
   if (!data) {
