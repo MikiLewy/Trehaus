@@ -6,5 +6,5 @@ export const fetchOffersListings = async (): Promise<Offer[]> => {
     content_type: 'offer',
   });
 
-  return items;
+  return items as unknown as Offer[];
 };
