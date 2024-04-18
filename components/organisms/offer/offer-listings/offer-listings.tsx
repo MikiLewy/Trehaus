@@ -1,19 +1,36 @@
+'use client';
+
 import OfferCard from '@/components/atoms/offer-card/offer-card';
-import { offerListings } from '@/features/offer-details/mocks/offer-listings';
+import { useOffersListings } from '@/hooks/api/offer/use-offers-listings';
 
 const OfferListings = () => {
+  const { data } = useOffersListings();
+
+  console.log(data);
+
+  if (!data) {
+    return 'no data';
+  }
+
   return (
     <div className="content-container vertical-section-spacing grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:gap-y-8">
-      {offerListings.map(offer => (
-        <OfferCard
-          key={offer.key}
-          title={offer.title}
-          description={offer.description}
-          buttonHref={offer.buttonHref}
-          img={offer.img}
-          titleCaption={offer.titleCaption}
-        />
-      ))}
+      {data.map(
+        ({
+          fields: { title, slug, squareMeters, shortDescription, mainImage },
+        }) => (
+          <OfferCard
+            key={slug}
+            title={title}
+            description={shortDescription}
+            buttonHref={`oferta/${slug}`}
+            img={{
+              src: (mainImage.fields.file?.url as string) ?? '',
+              alt: (mainImage.fields.title as string) ?? '',
+            }}
+            squareMeters={squareMeters}
+          />
+        ),
+      )}
     </div>
   );
 };

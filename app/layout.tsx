@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/organisms/footer/footer';
 import Navbar from '@/components/organisms/navbar';
+import Providers from '@/providers/providers';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={poppins.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
