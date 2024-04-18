@@ -5,14 +5,13 @@ import {
 } from '@tanstack/react-query';
 
 import PageHeader from '@/components/atoms/page-header/page-header';
-import OfferListings from '@/components/organisms/offer/offer-listings/offer-listings';
-import { usePrefetchOffersListings } from '@/hooks/api/offer/use-prefetch-offers-listings';
-
+import OfferListings from '@/features/offer/components/organisms/offer-listings/offer-listings';
+import { usePrefetchOffersListings } from '@/features/offer/hooks/api/offer/use-prefetch-offers-listings';
 
 const Offer = async () => {
   const queryClient = new QueryClient();
 
-  usePrefetchOffersListings(queryClient);
+  await usePrefetchOffersListings();
 
   return (
     <main>

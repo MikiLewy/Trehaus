@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+import { getVariant } from '@/components/atoms/button/utils/button';
 import SpinnerIcon from '@/icons/spinner';
-import { getVariant } from '@/utils/button';
 
 export type ButtonVariant = 'contained' | 'outlined';
 
