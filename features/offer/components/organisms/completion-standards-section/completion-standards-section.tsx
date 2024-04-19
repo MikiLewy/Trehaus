@@ -25,9 +25,7 @@ const CompletionStandardsSection = ({ slug }: Props) => {
     return 'Brak danych';
   }
 
-  const {
-    fields: { finishingStandards },
-  } = data[0];
+  const { finishingStandards } = data;
 
   return (
     <section>

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { createHttpsUrl } from '@/utils/create-https-url';
 
 interface Props {
   slug: string;
@@ -24,9 +25,7 @@ const PhotosGallery = ({ slug }: Props) => {
     return 'Brak danych';
   }
 
-  const {
-    fields: { mainImage, thumbnails },
-  } = data[0];
+  const { mainImage, thumbnails } = data;
 
   const images = [mainImage, ...(thumbnails ?? [])];
 
@@ -38,7 +37,7 @@ const PhotosGallery = ({ slug }: Props) => {
   return (
     <>
       <Image
-        src={`https://${mainImage?.fields.file?.url}` ?? ''}
+        src={createHttpsUrl(mainImage?.fields.file?.url as string)}
         alt={(mainImage?.fields.title as string) ?? 'główne zdjęcie projektu'}
         width={400}
         height={400}
@@ -49,7 +48,7 @@ const PhotosGallery = ({ slug }: Props) => {
         {thumbnails?.map((image, index) => (
           <Image
             key={`${image.fields.file?.url}`}
-            src={`https://${image.fields.file?.url}`}
+            src={createHttpsUrl(image.fields.file?.url as string)}
             alt={image.fields.title as string}
             onClick={() => {
               setSelectedIndex(index + 1);

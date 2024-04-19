@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { createHttpsUrl } from '@/utils/create-https-url';
 
 interface Props {
   slug: string;
@@ -29,9 +30,11 @@ const GroundFloorPlan = ({ slug }: Props) => {
     return 'Brak danych';
   }
 
-  const {
-    fields: { groundFloorImage, groundFloorDetails },
-  } = data[0];
+  const { groundFloorImage, groundFloorDetails } = data;
+
+  if (!groundFloorDetails) {
+    return null;
+  }
 
   return (
     <section className="flex flex-col items-start md:items-center md:flex-row gap-4 my-2 md:my-5">
@@ -44,17 +47,19 @@ const GroundFloorPlan = ({ slug }: Props) => {
           </div>
         ))}
       </div>
-      <div className={`basis-full md:basis-3/5`}>
-        <Image
-          src={`https://${groundFloorImage.fields.file?.url}`}
-          alt={groundFloorImage.fields.title as string}
-          draggable={false}
-          width={400}
-          height={400}
-          layout="responsive"
-          className="rounded-md h-full w-full min-h-[300px]"
-        />
-      </div>
+      {groundFloorImage ? (
+        <div className={`basis-full md:basis-3/5`}>
+          <Image
+            src={createHttpsUrl(groundFloorImage?.fields?.file?.url as string)}
+            alt={groundFloorImage?.fields?.title as string}
+            draggable={false}
+            width={400}
+            height={400}
+            layout="responsive"
+            className="rounded-md h-full w-full min-h-[300px]"
+          />
+        </div>
+      ) : null}
     </section>
   );
 };

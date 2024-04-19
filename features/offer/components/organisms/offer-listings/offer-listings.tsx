@@ -7,8 +7,6 @@ import { useOffersListings } from '@/features/offer/hooks/api/offer/use-offers-l
 const OfferListings = () => {
   const { data, isLoading } = useOffersListings();
 
-  console.log(data);
-
   if (isLoading) {
     return (
       <div className="content-container vertical-section-spacing grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:gap-y-8">
@@ -26,9 +24,7 @@ const OfferListings = () => {
   return (
     <div className="content-container vertical-section-spacing grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 lg:gap-y-8">
       {data.map(
-        ({
-          fields: { title, slug, squareMeters, shortDescription, mainImage },
-        }) => (
+        ({ title, slug, squareMeters, shortDescription, mainImage }) => (
           <OfferCard
             key={slug}
             title={title}

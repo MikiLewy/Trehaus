@@ -24,7 +24,7 @@ const ProjectDescription = ({ slug }: Props) => {
     return 'Brak danych';
   }
 
-  const { description } = data[0].fields;
+  const { description } = data;
 
   return (
     <div className="flex flex-col gap-2">

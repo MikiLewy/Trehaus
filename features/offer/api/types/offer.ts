@@ -1,4 +1,4 @@
-import { Asset, EntryFields } from 'contentful';
+import { EntryFields } from 'contentful';
 
 export interface KeyValuePair {
   id: string;
@@ -7,18 +7,15 @@ export interface KeyValuePair {
 }
 
 export interface Offer {
-  contentTypeId: string;
-  fields: {
-    slug: string;
-    title: string;
-    description: EntryFields.RichText;
-    shortDescription: string;
-    mainImage: Asset;
-    squareMeters: EntryFields.Number;
-    thumbnails: Asset[];
-    details: KeyValuePair[];
-    finishingStandards: KeyValuePair[];
-    groundFloorImage: Asset;
-    groundFloorDetails: KeyValuePair[];
-  };
+  slug: EntryFields.Text;
+  title: EntryFields.Text;
+  description: EntryFields.RichText;
+  shortDescription: EntryFields.Text;
+  mainImage: EntryFields.AssetLink;
+  squareMeters: EntryFields.Number;
+  thumbnails: EntryFields.AssetLink[];
+  details: KeyValuePair[];
+  finishingStandards: KeyValuePair[];
+  groundFloorImage: EntryFields.AssetLink;
+  groundFloorDetails: KeyValuePair[];
 }

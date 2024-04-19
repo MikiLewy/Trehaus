@@ -24,9 +24,7 @@ const ProjectDetails = ({ slug }: Props) => {
     return 'Brak danych';
   }
 
-  const {
-    fields: { title, details, finishingStandards },
-  } = data[0];
+  const { title, details, finishingStandards } = data;
 
   return (
     <>

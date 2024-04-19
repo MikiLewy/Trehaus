@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { createHttpsUrl } from '@/utils/create-https-url';
+
 import Button from '../../../../../components/atoms/button/button';
 
 interface Props {
@@ -23,7 +25,7 @@ const OfferCard = ({
   return (
     <div className="flex flex-col gap-2 rounded-md bg-[#F5F5F4] overflow-hidden min-h-[500px] ">
       <Image
-        src={`https:${img.src}`}
+        src={createHttpsUrl(img.src)}
         alt={img.alt}
         layout="responsive"
         className="min-h-72 object-cover"
