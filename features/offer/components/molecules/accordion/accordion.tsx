@@ -1,5 +1,5 @@
-import { KeyValuePair } from '@/features/offer/api/types/offer';
 import { mobileTableData } from '@/features/offer/data/table';
+import { KeyValuePair } from '@/types/interfaces/key-value-pair';
 
 import AccordionItem from '../../atoms/accordion-item/accordion-item';
 
