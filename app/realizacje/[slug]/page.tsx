@@ -1,6 +1,6 @@
 import GoBackButton from '@/components/atoms/go-back-button/go-back-button';
-import RealizationAttachmentsGallery from '@/components/organisms/realization/realization-attachments-gallery/realization-attachments-gallery';
-import RealizationDetailsSection from '@/components/organisms/realization/realization-details-section/realization-details-section';
+import RealizationAttachmentsGallery from '@/features/realizations/components/organisms/realization-attachments-gallery';
+import RealizationDetailsSection from '@/features/realizations/components/organisms/realization-details-section';
 
 interface Props {
   params: { slug: string };
