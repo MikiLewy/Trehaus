@@ -1,4 +1,4 @@
-import RealizationGallery from '@/components/molecules/realization-gallery/realization-gallery';
+import RealizationGallery from '@/features/realizations/components/molecules/realization-gallery';
 
 const RealizationAttachmentsGallery = () => {
   return (
