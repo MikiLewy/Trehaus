@@ -1,6 +1,7 @@
 'use client';
 
 import CardSkeleton from '@/components/atoms/card-skeleton/card-skeleton';
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import OfferCard from '@/features/offer/components/atoms/offer-card/offer-card';
 import { useOffersListings } from '@/features/offer/hooks/api/offer/use-offers-listings';
 
@@ -18,7 +19,11 @@ const OfferListings = () => {
   }
 
   if (!data) {
-    return 'no data';
+    return (
+      <div className="content-container vertical-section-spacing">
+        <SomethingWentWrong />
+      </div>
+    );
   }
 
   return (

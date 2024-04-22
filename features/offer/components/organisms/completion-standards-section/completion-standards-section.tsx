@@ -2,6 +2,7 @@
 
 import { CheckCircle2, Minus } from 'lucide-react';
 
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { tableData } from '@/features/offer/data/table';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
@@ -15,14 +16,12 @@ interface Props {
 const CompletionStandardsSection = ({ slug }: Props) => {
   const { data, isLoading } = useOffer(slug);
 
-  console.log(data);
-
   if (isLoading) {
     return <TextSkeleton />;
   }
 
   if (!data) {
-    return 'Brak danych';
+    return <SomethingWentWrong />;
   }
 
   const { finishingStandards } = data;
@@ -51,20 +50,12 @@ const CompletionStandardsSection = ({ slug }: Props) => {
               key={id}
               className={`grid grid-cols-4  items-center place-items-center py-4 pl-2 gap-2 ${index % 2 === 0 ? 'bg-gray-200' : 'bg-white'}`}>
               <p className="text-base text-left w-full">{title}</p>
-              {standards.basic ? (
-                <CheckCircle2 size={26} />
-              ) : (
-                <Minus size={26} />
-              )}
-              {standards.plus ? (
-                <CheckCircle2 size={26} />
-              ) : (
-                <Minus size={26} />
-              )}
-              {standards.developer ? (
-                <CheckCircle2 size={26} />
-              ) : (
-                <Minus size={26} />
+              {Object.values(standards).map((value, index) =>
+                value ? (
+                  <CheckCircle2 key={`${value}-${index}`} size={26} />
+                ) : (
+                  <Minus key={`${value}-${index}`} size={26} />
+                ),
               )}
             </div>
           ))}

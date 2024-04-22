@@ -2,6 +2,7 @@
 import Image from 'next/image';
 
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 import { createHttpsUrl } from '@/utils/create-https-url';
@@ -12,8 +13,6 @@ interface Props {
 
 const GroundFloorPlan = ({ slug }: Props) => {
   const { data, isLoading } = useOffer(slug);
-
-  console.log(data);
 
   if (isLoading) {
     return (
@@ -27,7 +26,7 @@ const GroundFloorPlan = ({ slug }: Props) => {
   }
 
   if (!data) {
-    return 'Brak danych';
+    return <SomethingWentWrong />;
   }
 
   const { groundFloorImage, groundFloorDetails } = data;

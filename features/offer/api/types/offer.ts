@@ -15,6 +15,7 @@ export interface Offer {
   squareMeters: EntryFields.Number;
   thumbnails: EntryFields.AssetLink[];
   details: KeyValuePair[];
+  realizationHref: EntryFields.Text;
   finishingStandards: KeyValuePair[];
   groundFloorImage: EntryFields.AssetLink;
   groundFloorDetails: KeyValuePair[];

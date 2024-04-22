@@ -2,6 +2,7 @@
 
 import Button from '@/components/atoms/button/button';
 import PageTitle from '@/components/atoms/page-title/page-title';
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 
@@ -14,17 +15,15 @@ interface Props {
 const ProjectDetails = ({ slug }: Props) => {
   const { data, isLoading } = useOffer(slug);
 
-  console.log(data);
-
   if (isLoading) {
     return <TextSkeleton />;
   }
 
   if (!data) {
-    return 'Brak danych';
+    return <SomethingWentWrong />;
   }
 
-  const { title, details, finishingStandards } = data;
+  const { title, details, realizationHref, finishingStandards } = data;
 
   return (
     <>
@@ -48,8 +47,12 @@ const ProjectDetails = ({ slug }: Props) => {
             </div>
           ))}
           <div className="flex flex-col items-start sm:flex-row sm:items-center gap-4 sm:gap-2 mt-4">
-            {/* TODO: HIDE BUTTON WHEN REALIZATION IS NOT AVAILABLE */}
-            <Button variant="outlined">Zobacz realizację</Button>
+            {realizationHref ? (
+              <Button variant="outlined" href={realizationHref}>
+                Zobacz realizację
+              </Button>
+            ) : null}
+
             <Button href="/kontakt">Skontaktuj się z nami</Button>
           </div>
         </div>

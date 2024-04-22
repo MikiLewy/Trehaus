@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
@@ -22,7 +23,7 @@ const PhotosGallery = ({ slug }: Props) => {
   }
 
   if (!data) {
-    return 'Brak danych';
+    return <SomethingWentWrong />;
   }
 
   const { mainImage, thumbnails } = data;
@@ -45,18 +46,27 @@ const PhotosGallery = ({ slug }: Props) => {
         className="w-full h-full object-cover max-h-[400px] cursor-pointer"
       />
       <div className="grid grid-cols-4 gap-2 mt-2">
-        {thumbnails?.map((image, index) => (
-          <Image
+        {thumbnails.slice(0, 4)?.map((image, index) => (
+          <div
             key={`${image.fields.file?.url}`}
-            src={createHttpsUrl(image.fields.file?.url as string)}
-            alt={image.fields.title as string}
+            className="relative cursor-pointer"
             onClick={() => {
               setSelectedIndex(index + 1);
-            }}
-            className="w-full h-full max-h-36 object-cover cursor-pointer hover:opacity-80"
-            width={200}
-            height={200}
-          />
+            }}>
+            <Image
+              src={createHttpsUrl(image.fields.file?.url as string)}
+              alt={image.fields.title as string}
+              className="relative inset-0 w-full h-full max-h-36 object-cover  hover:opacity-80"
+              width={200}
+              height={200}
+            />
+            {thumbnails?.slice(0, 4)?.length - 1 === index &&
+            thumbnails?.length > 4 ? (
+              <div className="absolute inset-0 z-10 bg-white/60 flex items-center justify-center">
+                <p className="text-lg  lg:text-xl">+{thumbnails?.length - 4}</p>
+              </div>
+            ) : null}
+          </div>
         ))}
         <AttachmentsGallery
           attachments={transformedImages}

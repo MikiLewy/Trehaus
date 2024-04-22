@@ -2,10 +2,9 @@
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
-
-// TODO PASS DYNAMIC DATA
 
 interface Props {
   slug: string;
@@ -14,14 +13,12 @@ interface Props {
 const ProjectDescription = ({ slug }: Props) => {
   const { data, isLoading } = useOffer(slug);
 
-  console.log(data);
-
   if (isLoading) {
     return <TextSkeleton />;
   }
 
   if (!data) {
-    return 'Brak danych';
+    return <SomethingWentWrong />;
   }
 
   const { description } = data;
