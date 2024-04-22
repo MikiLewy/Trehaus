@@ -1,10 +1,6 @@
 import { EntryFields } from 'contentful';
 
-export interface KeyValuePair {
-  id: string;
-  key: string;
-  value: string;
-}
+import { KeyValuePair } from '@/types/interfaces/key-value-pair';
 
 export interface Offer {
   slug: EntryFields.Text;
