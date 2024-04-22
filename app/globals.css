@@ -4,7 +4,7 @@
 
 @layer utilities {
   .content-container {
-    @apply max-w-[1440px] px-4 md:px-8 w-full mx-auto;
+    @apply max-w-7xl 2xl:max-w-[1440px]  px-4 md:px-8 w-full mx-auto;
   }
   .vertical-section-spacing {
     @apply py-6 md:py-10 lg:py-14 xl:py-20;
