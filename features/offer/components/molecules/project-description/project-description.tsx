@@ -25,8 +25,8 @@ const ProjectDescription = ({ slug }: Props) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <h4 className="text-sm xl:text-base font-medium">Opis projektu:</h4>
-      <div className="text-xs xl:text-sm flex flex-col gap-2">
+      <h4 className="text-sm xl:text-lg font-medium">Opis projektu:</h4>
+      <div className="text-xs lg:text-sm xl:text-base flex flex-col gap-2">
         {documentToReactComponents(description)}
       </div>
     </div>
