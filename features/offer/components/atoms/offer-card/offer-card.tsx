@@ -28,7 +28,7 @@ const OfferCard = ({
         src={createHttpsUrl(img.src)}
         alt={img.alt}
         layout="responsive"
-        className="min-h-72 object-cover"
+        className="min-h-72 max-h-72 object-cover"
         width={100}
         height={100}
       />
