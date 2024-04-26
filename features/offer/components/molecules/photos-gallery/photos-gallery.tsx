@@ -40,10 +40,10 @@ const PhotosGallery = ({ slug }: Props) => {
       <Image
         src={createHttpsUrl(mainImage?.fields.file?.url as string)}
         alt={(mainImage?.fields.title as string) ?? 'główne zdjęcie projektu'}
-        width={400}
-        height={400}
+        width={800}
+        height={800}
         onClick={() => setSelectedIndex(0)}
-        className="w-full h-full object-cover max-h-[400px] cursor-pointer"
+        className="w-full h-full object-cover lg:min-h-[400px] max-h-[500px] cursor-pointer"
       />
       <div className="grid grid-cols-4 gap-2 mt-2">
         {thumbnails.slice(0, 4)?.map((image, index) => (

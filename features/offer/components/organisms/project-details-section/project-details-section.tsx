@@ -7,7 +7,7 @@ interface Props {
 
 const ProjectDetailsSection = ({ slug }: Props) => {
   return (
-    <div className="flex flex-col gap-4 lg:flex-row lg:gap-10">
+    <div className="flex flex-col gap-4 lg:flex-row lg:gap-8 j=">
       <div className="basis-3/5 lg:basis-3/5">
         <PhotosGallery slug={slug} />
       </div>
