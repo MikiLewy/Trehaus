@@ -1,3 +1,3 @@
 export const createHttpsUrl = (url: string): string => {
-  return `https://${url}`;
+  return `https:${url}`;
 };
