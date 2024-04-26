@@ -1,7 +1,7 @@
 import SectionTitle from '@/components/atoms/section-title/section-title';
-import Timeline from '@/components/molecules/timeline/timeline';
-import TimelineStep from '@/components/molecules/timeline/timeline-step';
 import { workWithUsSteps } from '@/constants/work-with-us-steps';
+import Timeline from '@/features/home/components/molecules/timeline/timeline';
+import TimelineStep from '@/features/home/components/molecules/timeline/timeline-step';
 
 const WorkWithUs = () => {
   return (
@@ -9,7 +9,8 @@ const WorkWithUs = () => {
       <div className="content-container relative">
         <SectionTitle>Jak wygląda współpraca z nami?</SectionTitle>
         <p className="mt-5 w-2/3">
-          Proces budowy wymarzonego domu z nami - krok po kroku. Oto nasza droga do spełnienia Państwa marzeń o nowym domu szkieletowym na własnej
+          Proces budowy wymarzonego domu z nami - krok po kroku. Oto nasza droga
+          do spełnienia Państwa marzeń o nowym domu szkieletowym na własnej
           działce.
         </p>
         <Timeline>

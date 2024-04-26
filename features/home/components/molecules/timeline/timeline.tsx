@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import TimelineCard from '@/components/molecules/timeline/timeline-card';
+import TimelineCard from '@/features/home/components/molecules/timeline/timeline-card';
 
 import TimelinePillar from './timeline-pillar';
 import TimelineStep from './timeline-step';
@@ -11,7 +11,11 @@ interface Props {
 }
 
 const Timeline = ({ children }: Props) => {
-  return <div className="h-full relative my-4 xl:my-10 flex flex-col items-start lg:items-center ">{children}</div>;
+  return (
+    <div className="h-full relative my-4 xl:my-10 flex flex-col items-start lg:items-center ">
+      {children}
+    </div>
+  );
 };
 
 Timeline.Pillar = TimelinePillar;

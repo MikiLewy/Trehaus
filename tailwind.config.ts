@@ -23,6 +23,7 @@ const config: Config = {
       },
       backgroundImage: {
         hero: "url('/hero.webp')",
+        mobile_hero: "url('/hero-mobile.webp')",
         footer: "url('/footer.webp')",
         footer_pattern: "url('/papyrus-dark-pattern.svg')",
       },
