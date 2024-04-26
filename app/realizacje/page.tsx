@@ -1,24 +1,26 @@
-import PageHeader from '@/components/atoms/page-header/page-header';
-import RealizationCard from '@/components/organisms/realizations/realization-card/realization-card';
-import { realizations } from '@/constants/realizations';
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from '@tanstack/react-query';
 
-const Realizations = () => {
+import PageHeader from '@/components/atoms/page-header/page-header';
+import Realizations from '@/features/realizations/components/organisms/realizations';
+import { usePrefetchRealizations } from '@/features/realizations/hooks/api/realizations/use-prefetch-realizations';
+
+const RealizationsPage = async () => {
+  const queryClient = new QueryClient();
+
+  await usePrefetchRealizations();
+
   return (
     <main>
       <PageHeader>Nasze realizacje</PageHeader>
-      <section className="vertical-section-spacing content-container grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 ">
-        {realizations.map(realization => (
-          <RealizationCard
-            key={realization.key}
-            title={realization.title}
-            description={realization.description}
-            img={realization.img}
-            buttonHref={realization.buttonHref}
-          />
-        ))}
-      </section>
+      <HydrationBoundary state={dehydrate(queryClient)}>
+        <Realizations />
+      </HydrationBoundary>
     </main>
   );
 };
 
-export default Realizations;
+export default RealizationsPage;

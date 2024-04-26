@@ -4,7 +4,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
 interface Props {
-  attachments: { src: string }[];
+  attachments: { src: string; alt: string }[];
   index: number;
   onClose: () => void;
 }

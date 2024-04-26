@@ -1,22 +1,15 @@
 import PageHeader from '@/components/atoms/page-header/page-header';
-import ContentSection from '@/components/organisms/technology/content-section/content-section';
-import { technologySections } from '@/constants/technology-sections';
+import ConstructionDetails from '@/features/technology/components/organisms/construction-details';
+import MechanicalVentilation from '@/features/technology/components/organisms/mechanical-ventilation';
 
 const Technology = () => {
   return (
     <main>
       <PageHeader>Technologia</PageHeader>
-      <div className="flex flex-col my-4">
-        {technologySections.map((technologySection, index) => (
-          <ContentSection
-            key={technologySection.key}
-            title={technologySection.title}
-            description={technologySection.description}
-            img={technologySection.img}
-            direction={index % 2 === 0 ? 'right' : 'left'}
-          />
-        ))}
-      </div>
+      <section className="flex flex-col my-4 content-container vertical-section-spacing gap-10 md:gap-10 lg:gap-14 xl:gap-20">
+        <ConstructionDetails />
+        <MechanicalVentilation />
+      </section>
     </main>
   );
 };

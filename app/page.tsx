@@ -1,9 +1,9 @@
-import AboutUs from '@/components/organisms/home/about-us/about-us';
-import CompanyShowcase from '@/components/organisms/home/company-showcase/company-showcase';
-import Hero from '@/components/organisms/home/hero/hero';
-import Stats from '@/components/organisms/home/stats/stats';
-import WhyChooseUs from '@/components/organisms/home/why-choose-us/why-choose-us';
-import WorkWithUs from '@/components/organisms/home/work-with-us/work-with-us';
+import AboutUs from '@/features/home/components/organisms/about-us';
+import CompanyShowcase from '@/features/home/components/organisms/company-showcase';
+import Hero from '@/features/home/components/organisms/hero';
+import Stats from '@/features/home/components/organisms/stats';
+import WhyChooseUs from '@/features/home/components/organisms/why-choose-us';
+import WorkWithUs from '@/features/home/components/organisms/work-with-us';
 
 export default function Home() {
   return (
