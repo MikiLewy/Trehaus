@@ -2,11 +2,11 @@ import Button from '@/components/atoms/button/button';
 
 const Hero = () => {
   return (
-    <header className="w-full h-[75vh] lg:h-[70vh] relative flex items-center justify-start">
-      <div className="absolute inset-0 bg-hero bg-cover bg-no-repeat bg-center"></div>
+    <header className="w-full h-[75vh]  relative flex items-center justify-start">
+      <div className="absolute inset-0 bg-mobile_hero 2xl:bg-hero bg-cover bg-no-repeat bg-center"></div>
       <div className="absolute inset-0 z-10 bg-black/65 " />
       <div className="relative z-20 content-container">
-        <div className=" max-w-[500px] flex flex-col gap-2  lg:max-w-[800px]">
+        <div className=" max-w-[500px] flex flex-col gap-2 lg:max-w-[800px]">
           <h1 className="text-3xl text-white lg:text-4xl xl:text-5xl font-medium xl:leading-snug">
             Budownictwo energooszczędne, konstrukcje drewniane
           </h1>
