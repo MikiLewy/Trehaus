@@ -23,7 +23,7 @@ const OfferCard = ({
   img,
 }: Props) => {
   return (
-    <div className="flex flex-col gap-2 rounded-md bg-[#F5F5F4] overflow-hidden min-h-[500px] ">
+    <div className="flex flex-col gap-2 rounded-md bg-gray-50 overflow-hidden min-h-[500px] ">
       <Image
         src={createHttpsUrl(img.src)}
         alt={img.alt}

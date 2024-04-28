@@ -8,7 +8,7 @@ interface Props {
 
 const SectionTitle = ({ children, className }: Props) => {
   const mergedClassName = twMerge(
-    'text-2xl sm:text-3xl xl:text-4xl font-medium',
+    'text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium',
     className,
   );
 
