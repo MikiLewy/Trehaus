@@ -36,17 +36,18 @@ const Button = ({
   fullWidth,
   ...rest
 }: Props) => {
-  const merged = twMerge(
+  const buttonClasses = twMerge(
     'btn',
     getVariant(variant),
     disabled && 'btn-disabled',
     fullWidth && 'w-full',
-    className,
   );
 
+  const merged = twMerge(buttonClasses, className);
+
   return href ? (
-    <Link href={href}>
-      <button className={merged} disabled={disabled} {...rest}>
+    <Link href={href} className={className}>
+      <button className={buttonClasses} disabled={disabled} {...rest}>
         {loading ? (
           <>
             Ładowanie...
