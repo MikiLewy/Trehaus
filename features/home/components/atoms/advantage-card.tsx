@@ -8,10 +8,12 @@ interface Props {
 
 const AdvantageCard = ({ title, description, Icon }: Props) => {
   return (
-    <div className="bg-primary-darker rounded-lg flex flex-col gap-2 items-center justify-center p-4 lg:py-8 text-white  lg:gap-4 lg:min-h-[400px]">
-      <Icon className="w-10 h-10 lg:h-12 lg:w-12" />
-      <h4 className="text-lg xl:text-xl text-center">{title}</h4>
-      <p className="text-sm text-white/85 xl:text-base mt-2">{description}</p>
+    <div className="flex flex-row gap-2 items-start justify-center  lg:py-8 text-black lg:gap-4">
+      <Icon className="h-8 w-8 xl:h-10 xl:w-10 min-w-max" />
+      <div className="flex flex-col">
+        <h4 className="text-lg xl:text-xl font-medium">{title}</h4>
+        <p className="text-sm text-black/75 xl:text-base mt-2">{description}</p>
+      </div>
     </div>
   );
 };

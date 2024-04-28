@@ -1,4 +1,3 @@
-import AboutUs from '@/features/home/components/organisms/about-us';
 import CompanyShowcase from '@/features/home/components/organisms/company-showcase';
 import Hero from '@/features/home/components/organisms/hero';
 import Stats from '@/features/home/components/organisms/stats';
@@ -9,9 +8,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <AboutUs />
-      <CompanyShowcase />
       <WhyChooseUs />
+      <CompanyShowcase />
       <WorkWithUs />
       <Stats />
     </main>

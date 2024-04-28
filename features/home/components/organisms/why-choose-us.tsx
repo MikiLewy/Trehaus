@@ -1,4 +1,5 @@
 import { ClipboardCheck, ShieldCheck, Users } from 'lucide-react';
+import Image from 'next/image';
 
 import SectionTitle from '@/components/atoms/section-title/section-title';
 import AdvantageCard from '@/features/home/components/atoms/advantage-card';
@@ -29,19 +30,36 @@ const advantagesCard = [
 
 const WhyChooseUs = () => {
   return (
-    <div className="content-container vertical-section-spacing">
-      <SectionTitle className="text-center">
-        Dlaczego domy Trehaus?
-      </SectionTitle>
-      <div className="flex flex-col lg:flex-row gap-4 mt-5 lg:mt-10 ">
-        {advantagesCard?.map(advantage => (
-          <AdvantageCard
-            key={advantage.key}
-            title={advantage.title}
-            description={advantage.description}
-            Icon={advantage.icon}
+    <div className="content-container vertical-section-spacing flex flex-col gap-8 md:gap-10">
+      <div>
+        <SectionTitle>Dlaczego domy Trehaus?</SectionTitle>
+        <p className="mt-3 lg:mt-5 max-w-[800px] text-black/70">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam,
+          praesentium porro dolorem temporibus doloribus vel! Eius eligendi
+          veniam sint quam maxime adipisci a? Quia minima exercitationem
+          perspiciatis quo a quae! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nam, praesentium porro dolorem temporibus doloribus
+          vel! Eius eligendi veniam
+        </p>
+      </div>
+      <div className="flex">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">
+          {advantagesCard?.map(advantage => (
+            <AdvantageCard
+              key={advantage.key}
+              title={advantage.title}
+              description={advantage.description}
+              Icon={advantage.icon}
+            />
+          ))}
+          <Image
+            src={'/construction.svg'}
+            alt="construction"
+            className="xl:ml-10 max-h-[350px] object-contain"
+            width={1000}
+            height={1000}
           />
-        ))}
+        </div>
       </div>
     </div>
   );
