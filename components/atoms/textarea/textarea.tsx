@@ -34,6 +34,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           {required ? '*' : ''}
         </Label>
         <textarea
+          {...other}
           rows={4}
           id={id}
           className={mergedClasses}
@@ -41,7 +42,6 @@ const Textarea = forwardRef<HTMLTextAreaElement, Props>(
           value={value}
           onChange={onChange}
           ref={ref}
-          {...other}
         />
         {errorMessage ? <ErrorMessage>{errorMessage}</ErrorMessage> : null}
       </div>

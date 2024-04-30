@@ -38,7 +38,9 @@ const TimelineCard = ({ description, img, title }: Props) => {
         className={`bg-[image:var(--image-url)] order-1 bg-cover bg-right bg-no-repeat min-h-32 w-full h-full basis-2/4 flex-1`}
       />
       <div className="flex flex-col gap-2 basis-2/4 py-6 px-4 xl:py-8 lg:px-8">
-        <h5 className="text-base md:text-xl xl:text-2xl font-semibold">{title}</h5>
+        <h4 className="text-base md:text-xl xl:text-2xl font-semibold">
+          {title}
+        </h4>
         <p className="text-sm">{description}</p>
       </div>
     </motion.div>

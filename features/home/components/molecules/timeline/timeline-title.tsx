@@ -16,12 +16,12 @@ const TimelineTitle = ({ children }: Props) => {
   });
 
   return (
-    <motion.h4
+    <motion.h3
       ref={ref}
       className="text-6xl font-semibold xl:text-7xl"
       style={{ opacity: scrollYProgress }}>
       {children}
-    </motion.h4>
+    </motion.h3>
   );
 };
 
