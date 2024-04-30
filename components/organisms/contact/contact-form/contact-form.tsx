@@ -51,7 +51,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-[550px]">
+    <div className="flex flex-col gap-4 lg:gap-6 max-w-[550px]">
       <Controller
         name="email"
         control={control}
@@ -68,6 +68,8 @@ const ContactForm = () => {
             onBlur={onBlur}
             ref={ref}
             required
+            type="text"
+            aria-labelledby="Email"
             aria-invalid={errors.email ? 'true' : 'false'}
             errorMessage={error?.message}
           />
@@ -86,10 +88,13 @@ const ContactForm = () => {
             value={value}
             name={name}
             id={name}
+            type="text"
             onBlur={onBlur}
             ref={ref}
             required
+            className="max-h-[500px]"
             aria-invalid={errors.message ? 'true' : 'false'}
+            aria-labelledby="Wiadomość"
             errorMessage={error?.message}
           />
         )}
@@ -103,13 +108,14 @@ const ContactForm = () => {
         }) => (
           <div className="mt-2">
             <Checkbox
-              label="Wiadomość"
+              label="Zgoda na przetwarzanie danych osobowych"
               labelClassName="text-xs text-gray-500"
               onChange={onChange}
               checked={value}
               name={name}
               id={name}
               onBlur={onBlur}
+              aria-labelledby="Zgoda na przetwarzanie danych osobowych"
               aria-invalid={errors.agreement ? 'true' : 'false'}
               checkboxLabel={
                 <p>
@@ -135,7 +141,7 @@ const ContactForm = () => {
         )}
       />
       <Button
-        className="self-start"
+        className="self-start mt-5"
         disabled={!isValid}
         loading={isSubmitting}
         onSubmit={handleSubmit(onSubmit)}>

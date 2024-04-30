@@ -16,7 +16,13 @@ const ClientNavbar = () => {
 
   return (
     <>
-      <motion.button initial="hide" animate={isOpen ? 'show' : 'hide'} onClick={handleToggle} className="flex flex-col space-y-1 relative z-10">
+      <motion.button
+        id="hamburger"
+        aria-label="Hamburger menu"
+        initial="hide"
+        animate={isOpen ? 'show' : 'hide'}
+        onClick={handleToggle}
+        className="flex flex-col space-y-1 relative z-10">
         <motion.span
           variants={{
             hide: {
@@ -93,7 +99,9 @@ const ClientNavbar = () => {
                   },
                 }}>
                 {routes.map(({ key, href, title }) => (
-                  <NavLink title={title} key={key} href={href} />
+                  <li key={key}>
+                    <NavLink title={title} href={href} />
+                  </li>
                 ))}
               </motion.ul>
               <div className=" mt-auto py-5 bg-gray-100 w-full">

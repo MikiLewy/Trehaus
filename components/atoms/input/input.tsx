@@ -29,12 +29,13 @@ const Input = forwardRef<HTMLInputElement, Props>(
           {required ? '*' : ''}
         </Label>
         <input
+          {...other}
+          id={id}
           className={mergedClasses}
           required={required}
           value={value}
           ref={ref}
           onChange={onChange}
-          {...other}
         />
         {errorMessage ? <ErrorMessage>{errorMessage}</ErrorMessage> : null}
       </div>
