@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Button from '@/components/atoms/button/button';
@@ -39,9 +40,16 @@ const contactInfo = [
 const Footer = () => {
   return (
     <footer>
-      <div className="relative bg-footer bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center min-h-[50vh] xl:min-h-[60vh] ">
-        <Overlay />
-        <div className="relative z-10 flex flex-col gap-4  xl:gap-10 text-center content-container">
+      <div className="relative flex flex-col items-center justify-center min-h-[50vh] xl:min-h-[60vh] ">
+        <Overlay className="z-10" />
+        <Image
+          src={'/footer.webp'}
+          alt="Projekt domu KA142 SZ"
+          className="absolute z-0 inset-0 object-cover"
+          fill
+          loading="lazy"
+        />
+        <div className="relative z-20 flex flex-col gap-4  xl:gap-10 text-center content-container">
           <SectionTitle className="text-white">
             Porozmawiajmy o Twoim wymarzonym domu
           </SectionTitle>
@@ -73,7 +81,9 @@ const Footer = () => {
                 Polityka prywatności
               </Link>
             </p>
-            <Link href={FACEBOOK_URL}>
+            <Link
+              href={FACEBOOK_URL}
+              aria-label="Odwiedź facebooka firmy Trehaus">
               <FacebookIcon className="w-4 md:w-5 cursor-pointer hover:text-white/60" />
             </Link>
           </div>

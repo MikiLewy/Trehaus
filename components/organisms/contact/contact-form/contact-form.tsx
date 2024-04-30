@@ -51,7 +51,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-[550px]">
+    <div className="flex flex-col gap-4 lg:gap-6 max-w-[550px]">
       <Controller
         name="email"
         control={control}
@@ -89,6 +89,7 @@ const ContactForm = () => {
             onBlur={onBlur}
             ref={ref}
             required
+            className="max-h-[500px]"
             aria-invalid={errors.message ? 'true' : 'false'}
             errorMessage={error?.message}
           />
@@ -135,7 +136,7 @@ const ContactForm = () => {
         )}
       />
       <Button
-        className="self-start"
+        className="self-start mt-5"
         disabled={!isValid}
         loading={isSubmitting}
         onSubmit={handleSubmit(onSubmit)}>
