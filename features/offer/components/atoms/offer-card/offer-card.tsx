@@ -11,7 +11,6 @@ interface Props {
   img: {
     src: string;
     alt: string;
-    priority: boolean;
   };
   buttonHref: string;
 }
@@ -28,7 +27,7 @@ const OfferCard = ({
       <Image
         src={createHttpsUrl(img.src)}
         alt={img.alt}
-        priority={img.priority}
+        loading="lazy"
         className="min-h-72 max-h-72 w-full object-cover"
         width={400}
         height={288}
@@ -36,7 +35,7 @@ const OfferCard = ({
       <div className="px-6 py-4 flex flex-col flex-1 justify-between">
         <div className="flex flex-col gap-3 flex-1">
           <div>
-            <h4 className="font-semibold text-xl">{title}</h4>
+            <h3 className="font-semibold text-xl">{title}</h3>
             <p className="text-xs mt-0.5">Dom {squareMeters} m²</p>
           </div>
           <p className="text-sm text-black/75 max-w-[80%]">{description}</p>

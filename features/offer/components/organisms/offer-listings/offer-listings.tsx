@@ -38,7 +38,6 @@ const OfferListings = () => {
             img={{
               src: (mainImage.fields.file?.url as string) ?? '',
               alt: (mainImage.fields.title as string) ?? '',
-              priority: index < 3,
             }}
             squareMeters={squareMeters}
           />
