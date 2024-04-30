@@ -21,7 +21,6 @@ const Hero = () => {
         quality={100}
         className="hidden absolute inset-0 object-cover w-full h-full 2xl:block"
       />
-      {/* <div className="absolute inset-0 bg-mobile_hero 2xl:bg-hero bg-cover bg-no-repeat bg-center"></div> */}
       <div className="absolute inset-0 z-10 bg-black/65 " />
       <div className="relative z-20 content-container">
         <div className=" max-w-[500px] flex flex-col gap-2 lg:max-w-[800px]">
