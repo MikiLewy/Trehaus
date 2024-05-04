@@ -1,37 +1,35 @@
 export const workWithUsSteps = [
   {
-    key: 'start',
+    key: 'choose',
     title: 'Wybór projektu',
     description:
-      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie lub razem stworzymy całkiem nowy projekt od czystej kartki.',
+      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie.',
     img: '/bilbo.webp',
   },
   {
     key: 'start2',
-    title: 'Wybór projektu',
+    title: 'Formalności',
     description:
-      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie lub razem stworzymy całkiem nowy projekt od czystej kartki.',
+      'Po wyborze projektu oraz podpisaniu umowy, pomożemy w uzyskaniu warunków zabudowy oraz otrzymaniu pozwolenia na budowę.',
     img: '/bilbo.webp',
   },
   {
     key: 'start3',
-    title: 'Wybór projektu',
-    description:
-      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie lub razem stworzymy całkiem nowy projekt od czystej kartki.',
+    title: 'Przygotowanie terenu pod budowę',
+    description: 'Pomożemy w uzbrojeniu działki w wodę oraz prąd budowlany.',
     img: '/bilbo.webp',
   },
   {
     key: 'start4',
-    title: 'Wybór projektu',
+    title: 'Budowa',
     description:
-      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie lub razem stworzymy całkiem nowy projekt od czystej kartki.',
+      'Wybudujemy dom zgodnie z projektem, terminem oraz zapisami ustalonymi w podpisanej umowie.',
     img: '/bilbo.webp',
   },
   {
     key: 'start5',
-    title: 'Wybór projektu',
-    description:
-      'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie lub razem stworzymy całkiem nowy projekt od czystej kartki.',
+    title: 'Zakończenie budowy',
+    description: 'Przekazanie kluczy do domu nowym właścicielom.',
     img: '/bilbo.webp',
   },
 ];
