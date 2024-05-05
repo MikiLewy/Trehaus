@@ -1,10 +1,12 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { CSSProperties } from 'react';
+import Image from 'next/image';
+
+import { Image as ImageInterface } from '@/types/interfaces/image';
 
 interface Props {
-  img: string;
+  img: ImageInterface;
   title: string;
   description: string;
 }
@@ -28,17 +30,24 @@ const cardVariants: Variants = {
 const TimelineCard = ({ description, img, title }: Props) => {
   return (
     <motion.div
-      className="flex flex-col md:flex-row gap-2  justify-between items-start overflow-hidden rounded-lg bg-white"
+      className="flex flex-col sm:flex-row gap-2 w-full min-h-52 md:min-h-60  justify-between items-start overflow-hidden rounded-lg bg-white"
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
-      viewport={{ once: true, amount: 0.5 }}>
-      <div
-        style={{ '--image-url': `url('${img}');` } as CSSProperties}
-        className={`bg-[image:var(--image-url)] order-1 bg-cover bg-right bg-no-repeat min-h-32 w-full h-full basis-2/4 flex-1`}
-      />
-      <div className="flex flex-col gap-2 basis-2/4 py-6 px-4 xl:py-8 lg:px-8">
-        <h5 className="text-base md:text-xl xl:text-2xl font-semibold">{title}</h5>
+      viewport={{ once: true, amount: 0.7 }}>
+      <div className="relative order-1 min-h-32 w-full h-full basis-2/5 flex-1">
+        <Image
+          src={img.src}
+          alt={img.alt}
+          loading="lazy"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="flex flex-col gap-2 basis-3/5 py-6 px-4 xl:py-8 lg:px-8">
+        <h4 className="text-base md:text-xl xl:text-2xl font-semibold">
+          {title}
+        </h4>
         <p className="text-sm">{description}</p>
       </div>
     </motion.div>

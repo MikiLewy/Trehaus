@@ -20,7 +20,8 @@ const RealizationCard = ({ title, buttonHref, description, img }: Props) => {
         src={createHttpsUrl(img.src)}
         alt={img.alt}
         width={500}
-        height={500}
+        height={300}
+        loading="lazy"
         className="w-full min-h-[300px] max-h-[300px] object-cover"
       />
       <div className="flex flex-col flex-1 py-4 lg:py-8 gap-2 lg:gap-4 ">

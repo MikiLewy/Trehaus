@@ -13,11 +13,17 @@ const ServerNavbar = async () => {
     <nav className="sticky top-0 bg-white z-50 border-b border-black/20">
       <div className="flex items-center justify-between py-6 lg:py-8 content-container">
         <Link href={'/'}>
-          <Image src={logo} alt="Trehaus logo" className="relative cursor-pointer z-10 w-24 xl:w-32 " />
+          <Image
+            src={logo}
+            alt="Logo Trehaus"
+            className="relative cursor-pointer z-10 w-24 xl:w-32 "
+          />
         </Link>
         <ul className="hidden lg:flex items-center gap-4 lg:gap-6">
           {routes.map(({ key, title, href }) => (
-            <NavLink title={title} key={key} href={href} />
+            <li key={key}>
+              <NavLink title={title} href={href} />
+            </li>
           ))}
         </ul>
         <div className="hidden lg:block">
