@@ -1,5 +1,6 @@
 'use client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { INLINES, NodeData } from '@contentful/rich-text-types';
 
 import PageTitle from '@/components/atoms/page-title/page-title';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
@@ -36,7 +37,17 @@ const RealizationDetailsSection = ({ slug }: Props) => {
     <section className="flex flex-col gap-2 lg:gap-5">
       <PageTitle>{title}</PageTitle>
       <div className="text-sm lg:text-base flex flex-col gap-2">
-        {documentToReactComponents(description)}
+        {documentToReactComponents(description, {
+          renderNode: {
+            [INLINES.HYPERLINK]: ({ data }: { data: NodeData }, children) => (
+              <a
+                href={`${window.location.origin}${data.uri}`}
+                className="text-blue-500 hover:underline">
+                {children}
+              </a>
+            ),
+          },
+        })}
       </div>
     </section>
   );
