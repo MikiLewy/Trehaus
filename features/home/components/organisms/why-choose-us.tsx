@@ -36,13 +36,12 @@ const WhyChooseUs = () => {
         <SectionTitle>Dlaczego domy Trehaus?</SectionTitle>
         <Typography
           variant="p1"
-          className="mt-3 lg:mt-5 max-w-[800px] text-secondary">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam,
-          praesentium porro dolorem temporibus doloribus vel! Eius eligendi
-          veniam sint quam maxime adipisci a? Quia minima exercitationem
-          perspiciatis quo a quae! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Nam, praesentium porro dolorem temporibus doloribus
-          vel! Eius eligendi veniam
+          className="mt-3 lg:mt-5 max-w-[800px] text-black/85">
+          Nie trzymamy się ściśle określonego projektu, pochodzącego z lini
+          produkcyjnej. Jesteśmy w stanie wybudować każdy dom, zarówno z
+          projektów gotowych, dostępnych na stronach internetowych, jak również
+          z projektów indywidualnych. Finalny wygląd domu oraz rozmieszczenie
+          pomieszczeń wewnątrz dostosujemy do wymagań klienta.
         </Typography>
       </div>
       <div className="flex">
