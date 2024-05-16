@@ -1,5 +1,7 @@
 import { LucideIcon } from 'lucide-react';
 
+import Typography from '@/components/atoms/typography/typography';
+
 interface Props {
   title: string;
   description: string;
@@ -9,10 +11,12 @@ interface Props {
 const AdvantageCard = ({ title, description, Icon }: Props) => {
   return (
     <div className="flex flex-row gap-2 items-start justify-center  lg:py-8 text-black lg:gap-4">
-      <Icon className="h-8 w-8 xl:h-10 xl:w-10 min-w-max" />
+      <Icon className="h-8 w-8 xl:h-9 xl:w-9 min-w-max" />
       <div className="flex flex-col">
-        <h3 className="text-lg xl:text-xl font-medium">{title}</h3>
-        <p className="text-sm text-black/75 xl:text-base mt-2">{description}</p>
+        <Typography variant="h4">{title}</Typography>
+        <Typography variant="p1" className="text-secondary mt-2">
+          {description}
+        </Typography>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Button from '@/components/atoms/button/button';
 import Overlay from '@/components/atoms/overlay/overlay';
 import SectionTitle from '@/components/atoms/section-title/section-title';
+import Typography from '@/components/atoms/typography/typography';
 import {
   ADDRESS,
   EMAIL,
@@ -69,25 +70,27 @@ const Footer = () => {
                 className="flex flex-row items-center gap-3 text-white/80 hover:text-white/60"
                 key={key}>
                 <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
-                <p className="text-lg md:text-xl lg:text-2xl">{content}</p>
+                <Typography variant="h4" className="font-normal">
+                  {content}
+                </Typography>
               </Link>
             ))}
           </div>
           <div className="h-[1px] w-full bg-white/60 my-4"></div>
-          <div className="flex justify-between items-center ">
-            <p className="text-xs  md:text-sm">
+          <div className="flex justify-between items-center">
+            <Typography variant="p2">
               © {new Date().getFullYear()} Trehaus{' | '}
               <Link href={PRIVACY_POLICY_URL} className="hover:text-white/60">
                 Polityka prywatności
               </Link>
-            </p>
+            </Typography>
             <Link
               href={FACEBOOK_URL}
               aria-label="Odwiedź facebooka firmy Trehaus">
               <FacebookIcon className="w-4 md:w-5 cursor-pointer hover:text-white/60" />
             </Link>
           </div>
-          <p className="text-xs md:text-sm">
+          <Typography variant="p2" className="xl:text-sm">
             Designed & Developed by{' '}
             <Link
               href={LINKEDIN_URL}
@@ -95,7 +98,7 @@ const Footer = () => {
               className="hover:text-white/60 underline">
               Mikołaj Lewandowski
             </Link>
-          </p>
+          </Typography>
         </div>
       </div>
     </footer>

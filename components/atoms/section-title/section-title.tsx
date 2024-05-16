@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
+
+import Typography from '../typography/typography';
 
 interface Props {
   children: ReactNode;
@@ -7,12 +8,11 @@ interface Props {
 }
 
 const SectionTitle = ({ children, className }: Props) => {
-  const mergedClassName = twMerge(
-    'text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium',
-    className,
+  return (
+    <Typography variant="h2" className={className}>
+      {children}
+    </Typography>
   );
-
-  return <h2 className={mergedClassName}>{children}</h2>;
 };
 
 export default SectionTitle;

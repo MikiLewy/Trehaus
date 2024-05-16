@@ -3,6 +3,8 @@
 import { motion, Variants } from 'framer-motion';
 import { CSSProperties } from 'react';
 
+import Typography from '@/components/atoms/typography/typography';
+
 interface Props {
   img: string;
   title: string;
@@ -38,10 +40,12 @@ const TimelineCard = ({ description, img, title }: Props) => {
         className={`bg-[image:var(--image-url)] order-1 bg-cover bg-right bg-no-repeat min-h-32 w-full h-full basis-2/4 flex-1`}
       />
       <div className="flex flex-col gap-2 basis-2/4 py-6 px-4 xl:py-8 lg:px-8">
-        <h4 className="text-base md:text-xl xl:text-2xl font-semibold">
+        <Typography variant="h4" className="font-semibold">
           {title}
-        </h4>
-        <p className="text-sm">{description}</p>
+        </Typography>
+        <Typography variant="p2" className="xl:text-sm">
+          {description}
+        </Typography>
       </div>
     </motion.div>
   );
