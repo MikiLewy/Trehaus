@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 
+import Typography from '@/components/atoms/typography/typography';
 import {
   ADDRESS,
   EMAIL,
@@ -48,7 +49,9 @@ const ContactDetails = () => {
             className="flex flex-row items-center gap-3 text-white/80 hover:text-white/60"
             key={key}>
             <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
-            <p className="text-lg md:text-xl lg:text-2xl">{content}</p>
+            <Typography variant="h5" className="font-normal">
+              {content}
+            </Typography>
           </Link>
         ))}
       </div>
