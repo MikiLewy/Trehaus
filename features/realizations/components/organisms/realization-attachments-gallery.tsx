@@ -1,3 +1,4 @@
+import Typography from '@/components/atoms/typography/typography';
 import RealizationGallery from '@/features/realizations/components/molecules/realization-gallery';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 const RealizationAttachmentsGallery = ({ slug }: Props) => {
   return (
     <section className="flex flex-col gap-2">
-      <h4 className="text-lg font-medium">Zdjęcia</h4>
+      <Typography variant="h6">Zdjęcia</Typography>
       <RealizationGallery slug={slug} />
     </section>
   );

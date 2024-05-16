@@ -36,7 +36,7 @@ const RealizationDetailsSection = ({ slug }: Props) => {
   return (
     <section className="flex flex-col gap-2 lg:gap-5">
       <Typography variant="h4">{title}</Typography>
-      <div className="text-sm lg:text-base flex flex-col gap-2">
+      <div className="text-sm lg:text-base text-secondary flex flex-col gap-2">
         {documentToReactComponents(description, {
           renderNode: {
             [INLINES.HYPERLINK]: ({ data }: { data: NodeData }, children) => (

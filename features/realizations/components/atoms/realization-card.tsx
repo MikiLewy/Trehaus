@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import Button from '@/components/atoms/button/button';
+import Typography from '@/components/atoms/typography/typography';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
 interface Props {
@@ -26,8 +27,10 @@ const RealizationCard = ({ title, buttonHref, description, img }: Props) => {
       />
       <div className="flex flex-col flex-1 py-4 lg:py-8 gap-2 lg:gap-4 ">
         <div className="flex flex-col gap-2 lg:gap-4 flex-1">
-          <h3 className="text-xl lg:text-3xl font-medium">{title}</h3>
-          <p className="max-w-[90%] text-sm lg:text-base">{description}</p>
+          <Typography variant="h4">{title}</Typography>
+          <Typography variant="p2" className="max-w-[90%] text-secondary">
+            {description}
+          </Typography>
         </div>
         <Button className="mt-auto self-start" href={buttonHref}>
           Zobacz więcej
