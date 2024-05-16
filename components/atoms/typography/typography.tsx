@@ -6,9 +6,9 @@ type TypographyTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p1' | 'p2';
 const getVariantClassName = (variant: TypographyTag) => {
   switch (variant) {
     case 'h1':
-      return 'text-3xl lg:text-5xl  font-medium lg:leading-10';
+      return 'text-3xl lg:text-5xl  font-medium lg:leading-snug';
     case 'h2':
-      return 'text-2xl lg:text-3xl xl:text-5xl font-medium lg:leading-10';
+      return 'text-2xl lg:text-3xl xl:text-5xl font-medium lg:leading-snug';
     case 'h3':
       return 'text-xl lg:text-2xl xl:text-4xl font-medium lg:leading-10';
     case 'h4':
