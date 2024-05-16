@@ -12,11 +12,11 @@ const getVariantClassName = (variant: TypographyTag) => {
     case 'h3':
       return 'text-xl lg:text-2xl xl:text-4xl font-medium lg:leading-10';
     case 'h4':
-      return 'text-lg lg:text-xl xl:text-2xl font-medium lg:leading-10';
+      return 'text-lg lg:text-xl xl:text-3xl font-medium lg:leading-10';
     case 'h5':
-      return 'text-base lg:text-lg xl:text-xl font-medium lg:leading-10';
+      return 'text-base lg:text-lg xl:text-2xl font-medium lg:leading-10';
     case 'h6':
-      return 'text-sm lg:text-base xl:text-lg font-medium lg:leading-10';
+      return 'text-sm lg:text-base xl:text-xl font-medium lg:leading-10';
     case 'p1':
       return 'text-sm lg:text-base xl:text-lg font-normal lg:leading-10';
     case 'p2':

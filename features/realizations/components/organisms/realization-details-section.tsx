@@ -2,9 +2,9 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { INLINES, NodeData } from '@contentful/rich-text-types';
 
-import PageTitle from '@/components/atoms/page-title/page-title';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
+import Typography from '@/components/atoms/typography/typography';
 
 import { useRealization } from '../../hooks/api/realizations/use-realization';
 
@@ -35,7 +35,7 @@ const RealizationDetailsSection = ({ slug }: Props) => {
 
   return (
     <section className="flex flex-col gap-2 lg:gap-5">
-      <PageTitle>{title}</PageTitle>
+      <Typography variant="h4">{title}</Typography>
       <div className="text-sm lg:text-base flex flex-col gap-2">
         {documentToReactComponents(description, {
           renderNode: {

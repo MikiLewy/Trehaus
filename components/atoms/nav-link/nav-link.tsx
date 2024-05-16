@@ -15,7 +15,7 @@ const NavLink = ({ title, href }: Props) => {
   return (
     <Link
       href={href}
-      className={`text-lg lg:text-sm xl:text-base ${isActive ? 'text-gray-900' : 'text-gray-600'} font-medium cursor-pointer hover:text-gray-900 transition-colors duration-500`}>
+      className={`text-lg lg:text-sm xl:text-base ${isActive ? 'text-black' : 'text-gray-500'} font-medium cursor-pointer hover:text-gray-900 transition-colors duration-500`}>
       {title}
     </Link>
   );

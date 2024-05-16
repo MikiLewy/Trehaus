@@ -46,7 +46,7 @@ const TimelineCard = ({ description, img, title }: Props) => {
         />
       </div>
       <div className="flex flex-col gap-2 basis-3/5 py-6 px-4 xl:py-8 lg:px-8">
-        <Typography variant="h4" className="font-semibold">
+        <Typography variant="h5" className="font-semibold">
           {title}
         </Typography>
         <Typography variant="p2" className="text-secondary">

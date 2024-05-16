@@ -1,12 +1,10 @@
 'use client';
 
 import Button from '@/components/atoms/button/button';
-import PageTitle from '@/components/atoms/page-title/page-title';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
+import Typography from '@/components/atoms/typography/typography';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
-
-import DetailsTitle from '../../atoms/details-title/details-title';
 
 interface Props {
   slug: string;
@@ -27,23 +25,31 @@ const ProjectDetails = ({ slug }: Props) => {
 
   return (
     <>
-      <PageTitle>{title}</PageTitle>
+      <Typography variant="h4">{title}</Typography>
       <div className="mt-2 flex flex-col gap-4 md:flex-row md:gap-12 lg:flex-col lg:gap-4">
         <div className="mt-3 flex flex-col gap-2">
-          <DetailsTitle>Dane techniczne:</DetailsTitle>
+          <Typography variant="h6">Dane techniczne:</Typography>
           {details?.map(({ id, key, value }) => (
             <div key={id} className="flex items-center gap-2">
-              <span className="text-xs lg:text-base">{key}:</span>
-              <span className="text-xs lg:text-base font-medium">{value}</span>
+              <Typography variant="p2" className="text-secondary">
+                {key}:
+              </Typography>
+              <Typography variant="p2" className="font-medium">
+                {value}
+              </Typography>
             </div>
           ))}
         </div>
         <div className="mt-3 flex flex-col gap-2">
-          <DetailsTitle>Wersje wykończenia:</DetailsTitle>
+          <Typography variant="h6">Wersje wykończenia:</Typography>
           {finishingStandards?.map(({ id, key, value }) => (
             <div key={id} className="flex items-center gap-2">
-              <span className="text-xs lg:text-base">{key}:</span>
-              <span className="text-xs lg:text-base font-medium">{`od ${value}zł`}</span>
+              <Typography variant="p2" className="text-secondary">
+                {key}:
+              </Typography>
+              <Typography
+                variant="p2"
+                className=" font-medium">{`od ${value}zł`}</Typography>
             </div>
           ))}
           <div className="flex flex-col items-start sm:flex-row sm:items-center gap-4 sm:gap-2 mt-4">

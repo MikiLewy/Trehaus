@@ -6,9 +6,9 @@ import {
 
 import GoBackButton from '@/components/atoms/go-back-button/go-back-button';
 import ProjectDescription from '@/features/offer/components/molecules/project-description/project-description';
-import CompletionStandardsSection from '@/features/offer/components/organisms/completion-standards-section/completion-standards-section';
-import GroundFloorPlan from '@/features/offer/components/organisms/ground-floor-plan/ground-floor-plan';
-import ProjectDetailsSection from '@/features/offer/components/organisms/project-details-section/project-details-section';
+import CompletionStandardsSection from '@/features/offer/components/organisms/offer/completion-standards-section/completion-standards-section';
+import GroundFloorPlan from '@/features/offer/components/organisms/offer/ground-floor-plan/ground-floor-plan';
+import ProjectDetailsSection from '@/features/offer/components/organisms/offer/project-details-section/project-details-section';
 import { usePrefetchOffer } from '@/features/offer/hooks/api/offer/use-prefetch-offer';
 
 interface Props {

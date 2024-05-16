@@ -4,10 +4,11 @@ import { CheckCircle2, Minus } from 'lucide-react';
 
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
+import Typography from '@/components/atoms/typography/typography';
 import { tableData } from '@/features/offer/data/table';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 
-import Accordion from '../../molecules/accordion/accordion';
+import Accordion from '../../../molecules/accordion/accordion';
 
 interface Props {
   slug: string;
@@ -28,9 +29,9 @@ const CompletionStandardsSection = ({ slug }: Props) => {
 
   return (
     <section>
-      <h3 className="text-2xl font-medium lg:text-3xl">
+      <Typography variant="h4" className="font-medium">
         Standardy wykończenia
-      </h3>
+      </Typography>
       <Accordion finishingStandards={finishingStandards ?? []} />
       <div className="hidden lg:block">
         <div className=" grid-cols-4 mt-8 lg:grid">
@@ -38,8 +39,8 @@ const CompletionStandardsSection = ({ slug }: Props) => {
           {finishingStandards?.map(({ id, key, value }) => (
             <div key={id} className="grid-rows-1 h-full flex-1">
               <div className="flex flex-col items-center h-16">
-                <h4 className="text-base xl:text-xl font-medium">{key}</h4>
-                <p className="text-sm lg:text-base">{value}zł</p>
+                <Typography variant="h6">{key}</Typography>
+                <Typography variant="p2">{value}zł</Typography>
               </div>
             </div>
           ))}
@@ -49,7 +50,9 @@ const CompletionStandardsSection = ({ slug }: Props) => {
             <div
               key={id}
               className={`grid grid-cols-4  items-center place-items-center py-4 pl-2 gap-2 ${index % 2 === 0 ? 'bg-gray-200' : 'bg-white'}`}>
-              <p className="text-base text-left w-full">{title}</p>
+              <Typography variant="p2" className="text-left w-full">
+                {title}
+              </Typography>
               {Object.values(standards).map((value, index) =>
                 value ? (
                   <CheckCircle2 key={`${value}-${index}`} size={26} />

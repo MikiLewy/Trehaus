@@ -1,5 +1,5 @@
-import PhotosGallery from '../../molecules/photos-gallery/photos-gallery';
-import ProjectDetails from '../../molecules/project-details/project-details';
+import PhotosGallery from '../../../molecules/photos-gallery/photos-gallery';
+import ProjectDetails from '../../../molecules/project-details/project-details';
 
 interface Props {
   slug: string;

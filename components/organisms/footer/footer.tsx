@@ -70,7 +70,7 @@ const Footer = () => {
                 className="flex flex-row items-center gap-3 text-white/80 hover:text-white/60"
                 key={key}>
                 <Icon className="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7" />
-                <Typography variant="h4" className="font-normal">
+                <Typography variant="h5" className="font-normal">
                   {content}
                 </Typography>
               </Link>

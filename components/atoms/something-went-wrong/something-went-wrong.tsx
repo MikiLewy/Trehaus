@@ -1,3 +1,5 @@
+import Typography from '../typography/typography';
+
 const SomethingWentWrong = () => {
   return (
     <div className="flex flex-col h-full items-center justify-center gap-5 p-5 w-full bg-white">
@@ -21,13 +23,13 @@ const SomethingWentWrong = () => {
           </svg>
         </div>
       </div>
-      <h2 className="text-[36px] font-bold text-slate-800 lg:text-[50px]">
+      <Typography variant="h2" className="font-bold text-slate-800 ">
         Ups!
-      </h2>
-      <p className="text-slate-600 text-center lg:text-lg">
+      </Typography>
+      <Typography variant="p1" className="text-slate-600 text-center">
         Coś poszło nie tak. Spróbuj odświeżyć tę stronę lub spróbuj ponownie
         później
-      </p>
+      </Typography>
     </div>
   );
 };
