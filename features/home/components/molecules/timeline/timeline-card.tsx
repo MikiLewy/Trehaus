@@ -3,6 +3,7 @@
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 
+import Typography from '@/components/atoms/typography/typography';
 import { Image as ImageInterface } from '@/types/interfaces/image';
 
 interface Props {
@@ -45,10 +46,12 @@ const TimelineCard = ({ description, img, title }: Props) => {
         />
       </div>
       <div className="flex flex-col gap-2 basis-3/5 py-6 px-4 xl:py-8 lg:px-8">
-        <h4 className="text-base md:text-xl xl:text-2xl font-semibold">
+        <Typography variant="h5" className="font-semibold">
           {title}
-        </h4>
-        <p className="text-sm">{description}</p>
+        </Typography>
+        <Typography variant="p2" className="text-secondary">
+          {description}
+        </Typography>
       </div>
     </motion.div>
   );

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ReactNode } from 'react';
 
 import Overlay from '../overlay/overlay';
+import Typography from '../typography/typography';
 
 interface Props {
   children: ReactNode;
@@ -19,9 +20,9 @@ const PageHeader = ({ children }: Props) => {
         fill
       />
       <div className="content-container flex items-center h-full relative z-10">
-        <h2 className="text-white text-3xl lg:text-4xl xl:text-5xl">
+        <Typography variant="h2" className="text-white font-normal">
           {children}
-        </h2>
+        </Typography>
       </div>
     </div>
   );

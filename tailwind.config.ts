@@ -18,7 +18,8 @@ const config: Config = {
           darker: '#495F5C',
         },
         secondary: {
-          DEFAULT: '#F2E2E2',
+          DEFAULT: '#667085',
+          white: 'rgb(255 255 255 / 0.85)',
         },
       },
       backgroundImage: {

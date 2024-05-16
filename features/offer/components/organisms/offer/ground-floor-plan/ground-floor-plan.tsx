@@ -4,6 +4,7 @@ import Image from 'next/image';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
+import Typography from '@/components/atoms/typography/typography';
 import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
@@ -38,11 +39,15 @@ const GroundFloorPlan = ({ slug }: Props) => {
   return (
     <section className="flex flex-col items-start md:items-center md:flex-row gap-4 my-2 md:my-5">
       <div className="flex flex-col gap-2 lg:gap-4 xl:gap-6 md:basis-2/5">
-        <h4 className="text-sm xl:text-lg font-medium">Rzut projektu:</h4>
+        <Typography variant="h5">Rzut projektu:</Typography>
         {groundFloorDetails?.map(({ id, key, value }) => (
           <div key={id} className="flex items-center gap-1">
-            <span className="text-xs lg:text-base">{key}:</span>
-            <span className="text-xs lg:text-base font-medium">{value}</span>
+            <Typography variant="p2" className="text-secondary">
+              {key}:
+            </Typography>
+            <Typography variant="p2" className="font-medium">
+              {value}
+            </Typography>
           </div>
         ))}
       </div>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import Typography from '@/components/atoms/typography/typography';
 import { Image as ImageInterface } from '@/types/interfaces/image';
 
 import DetailsItem from '../atoms/details-item';
@@ -24,7 +25,9 @@ const ConstructionDetailSectionItem = ({
   return (
     <section className="flex flex-col items-center sm:flex-row sm:justify-between lg:items-start gap-6 md:gap-10 lg:gap-20 ">
       <div className="flex flex-col gap-2 lg:gap-4 xl:gap-6 w-full sm:basis-1/2   ">
-        <h3 className="text-2xl xl:text-3xl font-semibold">{title}</h3>
+        <Typography variant="h3" className="font-semibold">
+          {title}
+        </Typography>
         <div className="border-2 border-gray-200  max-w-xl p-4 flex flex-col gap-4">
           {details?.map(({ key, title, description }, index) => (
             <DetailsItem

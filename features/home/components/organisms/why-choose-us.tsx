@@ -2,6 +2,7 @@ import { ClipboardCheck, ShieldCheck, Users } from 'lucide-react';
 import Image from 'next/image';
 
 import SectionTitle from '@/components/atoms/section-title/section-title';
+import Typography from '@/components/atoms/typography/typography';
 import AdvantageCard from '@/features/home/components/atoms/advantage-card';
 
 const advantagesCard = [
@@ -33,13 +34,15 @@ const WhyChooseUs = () => {
     <div className="content-container vertical-section-spacing flex flex-col gap-8 md:gap-10">
       <div>
         <SectionTitle>Dlaczego domy Trehaus?</SectionTitle>
-        <p className="mt-3 lg:mt-5 max-w-[800px] text-black/70">
+        <Typography
+          variant="p1"
+          className="mt-3 lg:mt-5 max-w-[800px] text-black/85">
           Nie trzymamy się ściśle określonego projektu, pochodzącego z lini
           produkcyjnej. Jesteśmy w stanie wybudować każdy dom, zarówno z
           projektów gotowych, dostępnych na stronach internetowych, jak również
           z projektów indywidualnych. Finalny wygląd domu oraz rozmieszczenie
           pomieszczeń wewnątrz dostosujemy do wymagań klienta.
-        </p>
+        </Typography>
       </div>
       <div className="flex">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">

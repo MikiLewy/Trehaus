@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import Typography from '@/components/atoms/typography/typography';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
 import Button from '../../../../../components/atoms/button/button';
@@ -35,10 +36,16 @@ const OfferCard = ({
       <div className="px-6 py-4 flex flex-col flex-1 justify-between">
         <div className="flex flex-col gap-3 flex-1">
           <div>
-            <h3 className="font-semibold text-xl">{title}</h3>
-            <p className="text-xs mt-0.5">Dom {squareMeters} m²</p>
+            <Typography variant="h5" className="font-semibold ">
+              {title}
+            </Typography>
+            <Typography variant="p2" className="xl:text-sm mt-0.5">
+              Dom {squareMeters} m²
+            </Typography>
           </div>
-          <p className="text-sm text-black/75 max-w-[80%]">{description}</p>
+          <Typography variant="p2" className="text-secondary max-w-[80%]">
+            {description}
+          </Typography>
         </div>
         <Button className="mt-4" href={buttonHref}>
           Zobacz więcej
