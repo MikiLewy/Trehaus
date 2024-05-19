@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import { ReactNode } from 'react';
 
+import subPageHero from '@/public/sub-page-hero.webp';
+
 import Overlay from '../overlay/overlay';
+import Typography from '../typography/typography';
 
 interface Props {
   children: ReactNode;
@@ -12,16 +15,17 @@ const PageHeader = ({ children }: Props) => {
     <div className="h-[25vh] w-full relative">
       <Overlay className="z-10" />
       <Image
-        src="/sub-page-hero.webp"
+        src={subPageHero}
+        placeholder="blur"
         alt="Zdjęcie główne podstrony przedstawiające projekt domu Endo drewniany"
         priority
         className="absolute inset-0 w-full h-full object-cover"
         fill
       />
       <div className="content-container flex items-center h-full relative z-10">
-        <h2 className="text-white text-3xl lg:text-4xl xl:text-5xl">
+        <Typography variant="h2" className="text-white font-normal">
           {children}
-        </h2>
+        </Typography>
       </div>
     </div>
   );

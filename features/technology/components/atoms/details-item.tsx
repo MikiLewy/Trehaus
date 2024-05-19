@@ -1,5 +1,6 @@
 import { PlusCircle } from 'lucide-react';
 
+import Typography from '@/components/atoms/typography/typography';
 import { convertIndexToNumber } from '@/utils/convert-index-to-number';
 
 interface Props {
@@ -19,9 +20,9 @@ const DetailsItem = ({ title, description, index, isLastItem }: Props) => {
           </div>
           <PlusCircle className="min-w-max" size={24} />
         </summary>
-        <p className="text-sm lg:text-base mt-2 text-gray-950/90">
+        <Typography variant="p2" className="mt-2 text-secondary">
           {description}
-        </p>
+        </Typography>
       </details>
       {isLastItem ? <div className="w-full bg-gray-200 h-px mt-4" /> : null}
     </div>

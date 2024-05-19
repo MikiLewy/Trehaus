@@ -1,3 +1,6 @@
+import offerImg from '@/public/oferta.webp';
+import realizationImg from '@/public/realizacja.webp';
+
 import CompanyShowcaseCard from '../atoms/company-showcase-card';
 
 const companyShowcase = [
@@ -6,7 +9,7 @@ const companyShowcase = [
     title: 'Nasza oferta',
     description: 'Wybierz z naszej bogatej oferty idealny dom dla siebie',
     img: {
-      src: '/oferta.webp',
+      static: offerImg,
       alt: 'oferta',
     },
     href: '/oferta',
@@ -17,7 +20,7 @@ const companyShowcase = [
     description:
       'Przekonaj się, dlaczego nasi klienci nie mogą się doczekać, aby podzielić się swoimi pozytywnymi doświadczeniami z naszymi projektami!',
     img: {
-      src: '/realizacja.webp',
+      static: realizationImg,
       alt: 'realizacja',
     },
     href: '/realizacje',

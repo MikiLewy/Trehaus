@@ -1,10 +1,8 @@
 import { Asset, AssetLink } from 'contentful';
 
-import { Image } from '@/types/interfaces/image';
-
 export function parseContentfulContentImage(
   asset?: Asset<undefined, string> | { sys: AssetLink },
-): Image | null {
+): { src: string; alt: string } | null {
   if (!asset) {
     return null;
   }
