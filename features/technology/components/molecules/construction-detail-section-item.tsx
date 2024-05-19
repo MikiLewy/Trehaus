@@ -43,8 +43,9 @@ const ConstructionDetailSectionItem = ({
       <div
         className={`sm:basis-1/2 xl:basis-[40%] ${direction === 'left' ? 'sm:order-1' : 'sm:-order-1'}`}>
         <Image
-          src={img.src}
+          src={img.static}
           draggable={false}
+          placeholder="blur"
           alt={img.alt}
           width={300}
           height={300}
