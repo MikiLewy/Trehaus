@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 
 import Button from '@/components/atoms/button/button';
@@ -10,7 +10,7 @@ interface Props {
   description: string;
   href: string;
   img: {
-    src: string;
+    static: StaticImageData;
     alt: string;
   };
 }
@@ -34,8 +34,9 @@ const CompanyShowcaseCard = ({ title, img, href, description }: Props) => {
         </Button>
       </div>
       <Image
-        src={img.src}
+        src={img.static}
         alt={img.alt}
+        placeholder="blur"
         width={600}
         height={600}
         className="absolute inset-0 w-full h-full object-cover object-center duration-1000 z-0 group-hover:scale-110"
