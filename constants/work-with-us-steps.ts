@@ -1,3 +1,9 @@
+import agreement from '../public/work/agreement.webp';
+import construction from '../public/work/construction.webp';
+import keyToHouse from '../public/work/key-to-house.webp';
+import preparationForConstruction from '../public/work/preparation-for-construction.webp';
+import projectSelection from '../public/work/project-selection.webp';
+
 export const workWithUsSteps = [
   {
     key: 'project-selection',
@@ -5,7 +11,7 @@ export const workWithUsSteps = [
     description:
       'Jeśli masz już wybrany projekt to świetnie, zbudujemy Twój dom według Twojej wizji. Jeśli nie masz jeszcze projektu, możesz wybrać jeden z naszych, dostępnych na tej stronie.',
     img: {
-      src: '/work/project-selection.webp',
+      static: projectSelection,
       alt: 'Wybór projektu domu',
     },
   },
@@ -15,7 +21,7 @@ export const workWithUsSteps = [
     description:
       'Po wyborze projektu oraz podpisaniu umowy, pomożemy w uzyskaniu warunków zabudowy oraz otrzymaniu pozwolenia na budowę.',
     img: {
-      src: '/work/agreement.webp',
+      static: agreement,
       alt: 'Podpisanie umowy',
     },
   },
@@ -24,7 +30,7 @@ export const workWithUsSteps = [
     title: 'Przygotowanie terenu pod budowę',
     description: 'Pomożemy w uzbrojeniu działki w wodę oraz prąd budowlany.',
     img: {
-      src: '/work/preparation-for-construction.webp',
+      static: preparationForConstruction,
       alt: 'Przygotowanie działki do budowy',
     },
   },
@@ -34,7 +40,7 @@ export const workWithUsSteps = [
     description:
       'Wybudujemy dom zgodnie z projektem, terminem oraz zapisami ustalonymi w podpisanej umowie.',
     img: {
-      src: '/work/construction.webp',
+      static: construction,
       alt: 'Budowa domu zgodnie z projektem',
     },
   },
@@ -43,7 +49,7 @@ export const workWithUsSteps = [
     title: 'Zakończenie budowy',
     description: 'Przekazanie kluczy do domu nowym właścicielom.',
     img: {
-      src: '/work/key-to-house.webp',
+      static: keyToHouse,
       alt: 'Wręczenie kluczy do domu po zakończeniu budowy',
     },
   },

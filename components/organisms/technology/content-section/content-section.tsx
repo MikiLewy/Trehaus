@@ -1,12 +1,11 @@
 import Image from 'next/image';
 
+import { Image as ImageInterface } from '@/types/interfaces/image';
+
 interface Props {
   title: string;
   description: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  img: ImageInterface;
   direction: 'left' | 'right';
 }
 
@@ -22,11 +21,12 @@ const ContentSection = ({ title, description, img, direction }: Props) => {
       <div
         className={`basis-1/2 xl:basis-[55%] ${direction === 'left' ? 'sm:-order-1' : 'sm:order-1'} `}>
         <Image
-          src={img.src}
+          src={img.static}
           draggable={false}
           alt={img.alt}
           width={400}
           height={400}
+          placeholder="blur"
           layout="responsive"
           className="rounded-md h-full xl:min-h-[400px]"
         />

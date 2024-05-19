@@ -2,23 +2,27 @@ import Image from 'next/image';
 
 import Button from '@/components/atoms/button/button';
 import Typography from '@/components/atoms/typography/typography';
+import mobileHero from '@/public/hero-mobile.webp';
+import hero from '@/public/hero.webp';
 
 const Hero = () => {
   return (
     <header className="w-full h-[75vh] relative flex items-center justify-start">
       <Image
-        src={'/hero-mobile.webp'}
+        src={mobileHero}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
         fill
         priority
+        placeholder="blur"
         quality={100}
         className="absolute inset-0 object-cover w-full h-full 2xl:hidden"
       />
       <Image
-        src={'/hero.webp'}
+        src={hero}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
         fill
         priority
+        placeholder="blur"
         quality={100}
         className="hidden absolute inset-0 object-cover w-full h-full 2xl:block"
       />

@@ -38,8 +38,9 @@ const TimelineCard = ({ description, img, title }: Props) => {
       viewport={{ once: true, amount: 0.7 }}>
       <div className="relative order-1 min-h-32 w-full h-full basis-2/5 flex-1">
         <Image
-          src={img.src}
+          src={img.static}
           alt={img.alt}
+          placeholder="blur"
           loading="lazy"
           fill
           className="object-cover"

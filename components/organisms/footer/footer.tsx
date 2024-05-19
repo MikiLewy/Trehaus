@@ -16,6 +16,7 @@ import {
 } from '@/constants/contact';
 import { PRIVACY_POLICY_URL } from '@/constants/privacy-policy';
 import { FacebookIcon } from '@/icons/facebook';
+import footerImg from '@/public/footer.webp';
 
 const contactInfo = [
   {
@@ -44,9 +45,10 @@ const Footer = () => {
       <div className="relative flex flex-col items-center justify-center min-h-[50vh] xl:min-h-[60vh] ">
         <Overlay className="z-10" />
         <Image
-          src={'/footer.webp'}
+          src={footerImg}
           alt="Projekt domu KA142 SZ"
           className="absolute z-0 inset-0 object-cover"
+          placeholder="blur"
           fill
           loading="lazy"
         />
