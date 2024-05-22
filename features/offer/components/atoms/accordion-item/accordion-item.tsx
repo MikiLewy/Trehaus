@@ -38,7 +38,7 @@ const AccordionItem = ({ title, description, data }: Props) => {
                 rotate: 180,
               },
             }}>
-            <ChevronDown size={24} />
+            <ChevronDown size={24} className="min-w-max" />
           </motion.div>
         </div>
         <AnimatePresence initial={false}>

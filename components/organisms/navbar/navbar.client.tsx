@@ -1,18 +1,26 @@
 'use client';
 
 import { motion, AnimatePresence, MotionConfig } from 'framer-motion';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import NavLink from '@/components/atoms/nav-link/nav-link';
 import NavbarContactDetails from '@/components/atoms/navbar-contact-details/navbar-contact-details';
 import { routes } from '@/constants/routes';
 
 const ClientNavbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(prev => !prev);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <>
