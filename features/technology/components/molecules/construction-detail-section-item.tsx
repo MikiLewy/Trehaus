@@ -50,7 +50,7 @@ const ConstructionDetailSectionItem = ({
           width={300}
           height={300}
           layout="responsive"
-          className="rounded-md object-contain h-full min-h-[300px]"
+          className="rounded-md object-cover h-full min-h-[300px]"
         />
       </div>
     </section>
