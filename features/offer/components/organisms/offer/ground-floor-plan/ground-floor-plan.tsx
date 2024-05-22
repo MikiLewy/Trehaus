@@ -26,15 +26,11 @@ const GroundFloorPlan = ({ slug }: Props) => {
     );
   }
 
-  if (!data) {
+  if (!data || !data.groundFloorDetails) {
     return <SomethingWentWrong />;
   }
 
   const { groundFloorImage, groundFloorDetails } = data;
-
-  if (!groundFloorDetails) {
-    return null;
-  }
 
   return (
     <section className="flex flex-col items-start md:items-center md:flex-row gap-4 my-2 md:my-5">

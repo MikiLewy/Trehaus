@@ -10,17 +10,17 @@ const getVariantClassName = (variant: TypographyTag) => {
     case 'h2':
       return 'text-2xl lg:text-3xl xl:text-5xl font-medium lg:leading-snug';
     case 'h3':
-      return 'text-xl lg:text-2xl xl:text-4xl font-medium lg:leading-10';
+      return 'text-xl lg:text-2xl xl:text-4xl font-medium lg:leading-snug';
     case 'h4':
-      return 'text-lg lg:text-xl xl:text-3xl font-medium lg:leading-10';
+      return 'text-lg lg:text-xl xl:text-3xl font-medium lg:leading-snug';
     case 'h5':
-      return 'text-base lg:text-lg xl:text-2xl font-medium lg:leading-10';
+      return 'text-base lg:text-lg xl:text-2xl font-medium lg:leading-snug';
     case 'h6':
-      return 'text-sm lg:text-base xl:text-xl font-medium lg:leading-10';
+      return 'text-sm lg:text-base xl:text-xl font-medium lg:leading-snug';
     case 'p1':
-      return 'text-sm lg:text-base xl:text-lg font-normal lg:leading-10';
+      return 'text-sm lg:text-base xl:text-lg font-normal lg:leading-snug';
     case 'p2':
-      return 'text-xs lg:text-sm xl:text-base font-normal lg:leading-10';
+      return 'text-xs lg:text-sm xl:text-base font-normal lg:leading-snug';
   }
 };
 

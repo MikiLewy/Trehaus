@@ -36,14 +36,14 @@ const PhotosGallery = ({ slug }: Props) => {
   }));
 
   return (
-    <>
+    <div>
       <Image
         src={createHttpsUrl(mainImage?.fields.file?.url as string)}
         alt={(mainImage?.fields.title as string) ?? 'główne zdjęcie projektu'}
         width={800}
         height={800}
         onClick={() => setSelectedIndex(0)}
-        className="w-full h-full object-cover lg:min-h-[400px] max-h-[500px] cursor-pointer"
+        className="min-h-[300px] w-full h-full object-cover lg:min-h-[450px] max-h-[500px] cursor-pointer"
       />
       <div className="grid grid-cols-4 gap-2 mt-2">
         {thumbnails.slice(0, 4)?.map((image, index) => (
@@ -56,14 +56,14 @@ const PhotosGallery = ({ slug }: Props) => {
             <Image
               src={createHttpsUrl(image.fields.file?.url as string)}
               alt={image.fields.title as string}
-              className="relative inset-0 w-full h-full max-h-36 object-cover  hover:opacity-80"
+              className="relative inset-0 w-full h-full min-h-16 max-h-36 object-cover  hover:opacity-80"
               width={200}
               height={200}
             />
             {thumbnails?.slice(0, 4)?.length - 1 === index &&
             thumbnails?.length > 4 ? (
               <div className="absolute inset-0 z-10 bg-white/60 flex items-center justify-center">
-                <p className="text-lg  lg:text-xl">+{thumbnails?.length - 4}</p>
+                <p className="text-lg lg:text-xl">+{thumbnails?.length - 4}</p>
               </div>
             ) : null}
           </div>
@@ -74,7 +74,7 @@ const PhotosGallery = ({ slug }: Props) => {
           index={selectedIndex}
         />
       </div>
-    </>
+    </div>
   );
 };
 
