@@ -18,7 +18,7 @@
     "@tanstack/react-query": "^5.29.2",
     "@tanstack/react-query-devtools": "^5.29.2",
     "@vercel/speed-insights": "^1.0.10",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "contentful": "^10.8.8",
     "framer-motion": "^11.0.6",
     "lucide-react": "^0.341.0",
@@ -26,6 +26,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.1",
+    "react-hot-toast": "^2.4.1",
     "tailwind-merge": "^2.2.1",
     "yet-another-react-lightbox": "^3.17.2",
     "zod": "^3.22.4"

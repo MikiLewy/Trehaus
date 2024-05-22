@@ -3,19 +3,38 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
+import { Metadata } from 'next';
 
 import GoBackButton from '@/components/atoms/go-back-button/go-back-button';
-import ProjectDescription from '@/features/offer/components/molecules/project-description/project-description';
-import CompletionStandardsSection from '@/features/offer/components/organisms/offer/completion-standards-section/completion-standards-section';
-import GroundFloorPlan from '@/features/offer/components/organisms/offer/ground-floor-plan/ground-floor-plan';
-import ProjectDetailsSection from '@/features/offer/components/organisms/offer/project-details-section/project-details-section';
+import {
+  fetchOfferDetails,
+  fetchOffersListings,
+} from '@/features/offer/api/lib/offer';
+import OfferDetails from '@/features/offer/components/templates/offer-details';
 import { usePrefetchOffer } from '@/features/offer/hooks/api/offer/use-prefetch-offer';
 
 interface Props {
   params: { slug: string };
 }
 
-const OfferDetails = async ({ params }: Props) => {
+export async function generateStaticParams() {
+  const offerListings = await fetchOffersListings();
+
+  return offerListings?.map(({ slug }) => ({ slug })) ?? [];
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: Props): Promise<Metadata> {
+  const offer = await fetchOfferDetails(slug);
+
+  return {
+    title: offer.title,
+    description: offer.shortDescription,
+  };
+}
+
+const OfferDetailsPage = async ({ params }: Props) => {
   const queryClient = new QueryClient();
 
   await usePrefetchOffer(params.slug);
@@ -24,13 +43,10 @@ const OfferDetails = async ({ params }: Props) => {
     <main className="content-container my-8 lg:my-10 flex flex-col gap-6 lg:gap-8">
       <GoBackButton href="/oferta" />
       <HydrationBoundary state={dehydrate(queryClient)}>
-        <ProjectDetailsSection slug={params.slug} />
-        <ProjectDescription slug={params.slug} />
-        <GroundFloorPlan slug={params.slug} />
-        <CompletionStandardsSection slug={params.slug} />
+        <OfferDetails slug={params.slug} />
       </HydrationBoundary>
     </main>
   );
 };
 
-export default OfferDetails;
+export default OfferDetailsPage;

@@ -10,6 +10,7 @@ import Checkbox from '@/components/atoms/checkbox/checkbox';
 import Input from '@/components/atoms/input/input';
 import Textarea from '@/components/atoms/textarea/textarea';
 import { PRIVACY_POLICY_URL } from '@/constants/privacy-policy';
+import { useSubmitContactForm } from '@/features/contact/hooks/use-submit-contact-form';
 
 interface FormValues {
   email: string;
@@ -38,16 +39,19 @@ const ContactForm = () => {
   const {
     control,
     handleSubmit,
-    formState: { errors, isSubmitting, isValid },
+    reset,
+    formState: { errors, isValid },
   } = useForm<FormValues>({
     defaultValues,
     mode: 'onBlur',
     resolver: zodResolver(validationSchema),
   });
 
+  const { mutate: submitContactForm, isPending: isSubmittingContactForm } =
+    useSubmitContactForm(() => reset(defaultValues));
+
   const onSubmit = (data: FormValues) => {
-    // TODO ADD INTEGRATION TO EMAIL PROVIDER
-    console.log(data);
+    submitContactForm({ email: data.email, message: data.message });
   };
 
   return (
@@ -117,6 +121,7 @@ const ContactForm = () => {
               onBlur={onBlur}
               aria-labelledby="Zgoda na przetwarzanie danych osobowych"
               aria-invalid={errors.agreement ? 'true' : 'false'}
+              ref={ref}
               checkboxLabel={
                 <p>
                   Zgadzam się na przetwarzanie moich danych. Administratorem
@@ -134,7 +139,6 @@ const ContactForm = () => {
                   .
                 </p>
               }
-              ref={ref}
               errorMessage={error?.message}
             />
           </div>
@@ -143,8 +147,8 @@ const ContactForm = () => {
       <Button
         className="self-start mt-5"
         disabled={!isValid}
-        loading={isSubmitting}
-        onSubmit={handleSubmit(onSubmit)}>
+        loading={isSubmittingContactForm}
+        onClick={handleSubmit(onSubmit)}>
         Wyślij
       </Button>
     </div>

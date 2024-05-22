@@ -5,12 +5,19 @@ import ContactDetails from '../contact-details/contact-details';
 
 const ContactSection = () => {
   return (
-    <section className="flex flex-col lg:flex-row content-container">
-      <div className="flex flex-col gap-8 pr-8 lg:basis-1/2 vertical-section-spacing">
-        <Typography variant="h3">Skontaktuj się z nami</Typography>
-        <ContactForm />
+    <section>
+      <div className="flex flex-col lg:flex-row content-container">
+        <div className="flex flex-col gap-8 lg:gap-12 pr-8 lg:basis-1/2 vertical-section-spacing">
+          <Typography variant="h2">Skontaktuj się z nami</Typography>
+          <ContactForm />
+        </div>
+        <div className="hidden lg:flex lg:basis-1/2">
+          <ContactDetails />
+        </div>
       </div>
-      <ContactDetails />
+      <div className="lg:hidden">
+        <ContactDetails />
+      </div>
     </section>
   );
 };

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Typography from '@/components/atoms/typography/typography';
 import { Image as ImageInterface } from '@/types/interfaces/image';
 
-import DetailsItem from '../atoms/details-item';
+import AccordionItem from '../atoms/accordion-item';
 
 interface Props {
   title: string;
@@ -24,13 +24,13 @@ const ConstructionDetailSectionItem = ({
 }: Props) => {
   return (
     <section className="flex flex-col items-center sm:flex-row sm:justify-between lg:items-start gap-6 md:gap-10 lg:gap-20 ">
-      <div className="flex flex-col gap-2 lg:gap-4 xl:gap-6 w-full sm:basis-1/2   ">
+      <div className="flex flex-col gap-4 lg:gap-6  w-full sm:basis-1/2   ">
         <Typography variant="h3" className="font-semibold">
           {title}
         </Typography>
         <div className="border-2 border-gray-200  max-w-xl p-4 flex flex-col gap-4">
           {details?.map(({ key, title, description }, index) => (
-            <DetailsItem
+            <AccordionItem
               key={key}
               title={title}
               index={index}
@@ -50,7 +50,7 @@ const ConstructionDetailSectionItem = ({
           width={300}
           height={300}
           layout="responsive"
-          className="rounded-md h-full min-h-[300px]"
+          className="rounded-md object-cover h-full min-h-[300px]"
         />
       </div>
     </section>

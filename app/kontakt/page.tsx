@@ -1,13 +1,17 @@
-import PageHeader from '@/components/atoms/page-header/page-header';
+import { Metadata } from 'next';
+
 import ContactSection from '@/features/contact/components/organisms/contact-section/contact-section';
-import Map from '@/features/contact/components/organisms/map/map';
+
+export const metadata: Metadata = {
+  title: 'Kontakt',
+  description:
+    'Skontaktuj się z nami, aby uzyskać więcej informacji o naszych projektach budowlanych. Jesteśmy do Twojej dyspozycji poprzez telefon, email lub formularz kontaktowy. Odpowiemy na wszystkie pytania i pomożemy w realizacji Twojego wymarzonego domu. Zapraszamy do kontaktu!',
+};
 
 const Contact = () => {
   return (
     <main>
-      <PageHeader>Kontakt</PageHeader>
       <ContactSection />
-      <Map />
     </main>
   );
 };

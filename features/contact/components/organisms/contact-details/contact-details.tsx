@@ -40,7 +40,7 @@ const contactInfo = [
 
 const ContactDetails = () => {
   return (
-    <div className="flex flex-1 bg-primary ">
+    <div className="flex flex-1 bg-primary">
       <div className="vertical-section-spacing flex flex-col gap-9 justify-center content-container">
         {contactInfo.map(({ key, content, href, icon: Icon }) => (
           <Link

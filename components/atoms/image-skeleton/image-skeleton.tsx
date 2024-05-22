@@ -2,8 +2,8 @@ const ImageSkeleton = () => {
   return (
     <div
       role="status"
-      className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
-      <div className="flex items-center justify-center w-full h-72 bg-gray-300 rounded min-w-96">
+      className="space-y-8 px-4 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
+      <div className="flex items-center justify-center w-full h-72 bg-gray-300 rounded min-w-80">
         <svg
           className="w-10 h-10 text-gray-200"
           aria-hidden="true"

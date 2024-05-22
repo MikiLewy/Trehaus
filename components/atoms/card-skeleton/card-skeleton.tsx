@@ -2,7 +2,7 @@ const CardSkeleton = () => {
   return (
     <div
       role="status"
-      className="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ">
+      className="max-w-sm mx-auto w-full p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 ">
       <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded ">
         <svg
           className="w-10 h-10 text-gray-200 "

@@ -25,12 +25,12 @@ const ProjectDescription = ({ slug }: Props) => {
   const { description } = data;
 
   return (
-    <div className="flex flex-col gap-2">
+    <section className="flex flex-col gap-2">
       <Typography variant="h6">Opis projektu:</Typography>
       <div className="text-xs lg:text-sm xl:text-base text-secondary flex flex-col gap-2">
         {documentToReactComponents(description)}
       </div>
-    </div>
+    </section>
   );
 };
 
