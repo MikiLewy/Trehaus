@@ -27,7 +27,7 @@ const MechanicalVentilation = () => {
           width={300}
           height={300}
           layout="responsive"
-          className="rounded-md h-full object-contain min-h-[300px] xl:min-h-[300px]"
+          className="rounded-md h-full object-cover min-h-[300px] xl:min-h-[300px]"
         />
       </div>
     </section>
