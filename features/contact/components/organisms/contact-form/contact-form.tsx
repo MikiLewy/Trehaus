@@ -1,30 +1,36 @@
 'use client';
 
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
+import { useRef } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import Button from '@/components/atoms/button/button';
 import Checkbox from '@/components/atoms/checkbox/checkbox';
+import ErrorMessage from '@/components/atoms/error-message/error-message';
 import Input from '@/components/atoms/input/input';
 import Textarea from '@/components/atoms/textarea/textarea';
-import { PRIVACY_POLICY_URL } from '@/constants/privacy-policy';
 import { useSubmitContactForm } from '@/features/contact/hooks/use-submit-contact-form';
 
 interface FormValues {
   email: string;
   message: string;
   agreement: boolean;
+  hCaptchaResponse: string;
 }
 
 const defaultValues: FormValues = {
   email: '',
   message: '',
   agreement: false,
+  hCaptchaResponse: '',
 };
 
 const ContactForm = () => {
+  const captchaRef = useRef<HCaptcha | null>(null);
+
   const validationSchema = z.object({
     email: z
       .string()
@@ -34,6 +40,7 @@ const ContactForm = () => {
     agreement: z.boolean().refine(value => value === true, {
       message: 'To pole jest wymagane',
     }),
+    hCaptchaResponse: z.string().min(1, { message: 'To pole jest wymagane' }),
   });
 
   const {
@@ -48,10 +55,17 @@ const ContactForm = () => {
   });
 
   const { mutate: submitContactForm, isPending: isSubmittingContactForm } =
-    useSubmitContactForm(() => reset(defaultValues));
+    useSubmitContactForm(() => {
+      reset(defaultValues);
+      captchaRef.current?.resetCaptcha();
+    });
 
   const onSubmit = (data: FormValues) => {
-    submitContactForm({ email: data.email, message: data.message });
+    submitContactForm({
+      email: data.email,
+      message: data.message,
+      hCaptchaResponse: data.hCaptchaResponse,
+    });
   };
 
   return (
@@ -131,7 +145,8 @@ const ContactForm = () => {
                   sprzeciwu, jak również złożenia skargi do PUODO. Więcej
                   informacji w{' '}
                   <Link
-                    href={PRIVACY_POLICY_URL}
+                    href={'/polityka_prywatności.pdf'}
+                    rel="noopener noreferrer"
                     target="_blank"
                     className="underline">
                     Polityka prywatności
@@ -141,6 +156,28 @@ const ContactForm = () => {
               }
               errorMessage={error?.message}
             />
+          </div>
+        )}
+      />
+      <Controller
+        name="hCaptchaResponse"
+        control={control}
+        render={({ field: { onChange }, fieldState: { error } }) => (
+          <div className="max-w-52">
+            <HCaptcha
+              sitekey={
+                process.env.NEXT_PUBLIC_WEB3_FORMS_HCAPTCHA_SITE_KEY ?? ''
+              }
+              reCaptchaCompat={false}
+              onVerify={onChange}
+              ref={captchaRef}
+              onExpire={() => {
+                reset(defaultValues);
+              }}
+            />
+            {error?.message ? (
+              <ErrorMessage>{error?.message}</ErrorMessage>
+            ) : null}
           </div>
         )}
       />

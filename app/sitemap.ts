@@ -32,11 +32,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...realizationsEntries,
     {
       url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/technologia`,
-      lastModified: new Date(),
+      lastModified: new Date('2024-05-18'),
     },
     {
       url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/kontakt`,
-      lastModified: new Date(),
+      lastModified: new Date('2024-05-24'),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/info/cookies`,
+      lastModified: new Date('2024-05-25'),
     },
   ];
 }
