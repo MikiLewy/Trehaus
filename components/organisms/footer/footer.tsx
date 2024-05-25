@@ -14,7 +14,6 @@ import {
   MAP_URL,
   PHONE_NUMBER,
 } from '@/constants/contact';
-import { PRIVACY_POLICY_URL } from '@/constants/privacy-policy';
 import { FacebookIcon } from '@/icons/facebook';
 import footerImg from '@/public/footer.webp';
 
@@ -82,8 +81,19 @@ const Footer = () => {
           <div className="flex justify-between items-center">
             <Typography variant="p2">
               © {new Date().getFullYear()} Trehaus{' | '}
-              <Link href={PRIVACY_POLICY_URL} className="hover:text-white/60">
+              <Link
+                className="hover:text-white/60"
+                href={'/polityka_prywatności.pdf'}
+                rel="noopener noreferrer"
+                target="_blank">
                 Polityka prywatności
+              </Link>
+              {' | '}
+              <Link
+                className="hover:text-white/60 mr-2"
+                href={'/info/cookies'}
+                target="_blank">
+                Cookies
               </Link>
             </Typography>
             <Link

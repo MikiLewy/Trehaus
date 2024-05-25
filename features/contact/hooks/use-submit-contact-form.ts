@@ -5,8 +5,15 @@ import { submitContactForm } from '../api/lib/contact-form';
 
 export const useSubmitContactForm = (onSuccess?: () => void) => {
   return useMutation({
-    mutationFn: ({ email, message }: { email: string; message: string }) =>
-      submitContactForm(email, message),
+    mutationFn: ({
+      email,
+      message,
+      hCaptchaResponse,
+    }: {
+      email: string;
+      message: string;
+      hCaptchaResponse: string;
+    }) => submitContactForm(email, message, hCaptchaResponse),
     onSuccess: () => {
       toast.success('Wiadomość została wysłana pomyślnie');
       onSuccess?.();
