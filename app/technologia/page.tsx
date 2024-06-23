@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Technology = () => {
   return (
-    <main style={{ overflowX: 'hidden' }}>
+    <main>
       <PageHeader>Technologia</PageHeader>
       <section className="flex flex-col my-4 content-container vertical-section-spacing gap-10 md:gap-10 lg:gap-14 xl:gap-20">
         <ConstructionDetails />

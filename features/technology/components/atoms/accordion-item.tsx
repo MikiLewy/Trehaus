@@ -18,32 +18,30 @@ const AccordionItem = ({ title, description, index, isLastItem }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex-1 w-full">
-      <div className="w-full">
+    <div className="w-full">
+      <div className="w-full flex flex-wrap">
         <div
-          className="w-full flex-1 flex flex-row gap-2 items-center justify-between cursor-pointer"
+          className="w-full self-stretch flex flex-row gap-2 items-center justify-between cursor-pointer"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
-          <h4 className="w-full basis-4/5 text-sm lg:text-base xl:text-lg text-gray-950/90">
+          <h4 className="text-sm lg:text-base xl:text-lg text-gray-950/90">
             {convertIndexToNumber(index)}. {title}
           </h4>
-          <div className="basis-1/5 flex justify-end">
-            <motion.div
-              animate={isOpen ? 'show' : 'hide'}
-              variants={{
-                hide: {
-                  rotate: 0,
-                },
-                show: {
-                  rotate: 180,
-                },
-              }}>
-              {isOpen ? (
-                <MinusCircle size={24} className="min-w-max" />
-              ) : (
-                <PlusCircle size={24} className="min-w-max" />
-              )}
-            </motion.div>
-          </div>
+          <motion.div
+            animate={isOpen ? 'show' : 'hide'}
+            variants={{
+              hide: {
+                rotate: 0,
+              },
+              show: {
+                rotate: 180,
+              },
+            }}>
+            {isOpen ? (
+              <MinusCircle size={24} className="min-w-max" />
+            ) : (
+              <PlusCircle size={24} className="min-w-max" />
+            )}
+          </motion.div>
         </div>
         <AnimatePresence initial={false}>
           {isOpen && (
