@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 
 import PageHeader from '@/components/atoms/page-header/page-header';
 import ConstructionDetails from '@/features/technology/components/organisms/construction-details';
-import MechanicalVentilation from '@/features/technology/components/organisms/mechanical-ventilation';
 
 export const metadata: Metadata = {
   title: 'Technologia',
@@ -12,11 +11,10 @@ export const metadata: Metadata = {
 
 const Technology = () => {
   return (
-    <main>
+    <main style={{ overflowX: 'hidden' }}>
       <PageHeader>Technologia</PageHeader>
       <section className="flex flex-col my-4 content-container vertical-section-spacing gap-10 md:gap-10 lg:gap-14 xl:gap-20">
         <ConstructionDetails />
-        <MechanicalVentilation />
       </section>
     </main>
   );

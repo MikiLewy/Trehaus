@@ -21,13 +21,14 @@ const AccordionItem = ({ title, description, index, isLastItem }: Props) => {
     <div className="flex-1 w-full">
       <div className="w-full">
         <div
-          className="flex flex-row gap-2 items-center justify-between cursor-pointer"
+          className="w-full flex-1 flex flex-row gap-2 items-center justify-between cursor-pointer"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
-          <h4 className="w-full text-sm lg:text-base xl:text-lg text-gray-950/90">
+          <h4 className="w-full basis-4/5 text-sm lg:text-base xl:text-lg text-gray-950/90">
             {convertIndexToNumber(index)}. {title}
           </h4>
           <motion.div
             animate={isOpen ? 'show' : 'hide'}
+            className="basis-1/5 flex justify-end"
             variants={{
               hide: {
                 rotate: 0,

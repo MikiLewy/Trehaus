@@ -1,20 +1,6 @@
 import dachDomuParterowego from '../public/technology/dach-domu-parterowego.png';
 import dachDomuUzytkowego from '../public/technology/dach-domu-uzytkowego.png';
 import sciana from '../public/technology/sciana.png';
-import technology from '../public/technology/technology.png';
-
-export const technologySections = [
-  {
-    key: 'about',
-    title: 'Technologia',
-    description:
-      'Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie. Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.',
-    img: {
-      static: technology,
-      alt: 'Szkielet dachu drewnianego',
-    },
-  },
-];
 
 export const technologyConstructionDetailsSections = [
   {
