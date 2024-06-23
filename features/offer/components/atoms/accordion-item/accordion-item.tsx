@@ -19,13 +19,15 @@ const AccordionItem = ({ title, description, data }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-full flex-1">
       <div className="flex flex-col gap-2">
         <div
           className="flex flex-row items-center justify-between py-2"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
           <div className="flex flex-col">
-            <h4 className="text-lg font-medium lg:text-2xl">{title}</h4>
+            <h4 className="text-lg font-medium min-w-max lg:text-2xl">
+              {title}
+            </h4>
             <p className="text-sm lg:text-base">{description}zł</p>
           </div>
           <motion.div
