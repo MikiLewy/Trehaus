@@ -18,7 +18,7 @@ const advantagesCard = [
     icon: ShieldCheck,
     title: 'CERTYFIKOWANE MATERIAŁY',
     description:
-      'Wszystkie domy powstają wyłącznie z drewna certyfikowanego (drewno lite C24, drewno klejone KVH, drewno klejone warstwowo BSH). Doskonałe parametry cieplne uzyskujemy dzięki produktom Steico – nakrokwiowa płyta Steico Uniwersal oraz posyciowa płyta Steico Protect zapewniają otwartość dywfuzyjną przegród zewnętrznych oraz likwidują wszelkie mostki termiczne. Wszystkie przegrody zewnętrzne ocieplone są wdmuchiwaną izolacją z włókna drzewnego Steico Zell. Produkt ten charakteryzuje się wysoką gęstością (ok. 40 kg/m3), a tym samym dużą pojemnością cieplną.',
+      'Wszystkie domy powstają wyłącznie z drewna certyfikowanego (drewno lite C24, drewno klejone KVH, drewno klejone warstwowo BSH). Doskonałe parametry cieplne uzyskujemy dzięki produktom Steico – nakrokwiowa płyta Steico Uniwersal oraz poszyciowa płyta Steico Protect zapewniają otwartość dywfuzyjną przegród zewnętrznych oraz likwidują wszelkie mostki termiczne. Wszystkie przegrody zewnętrzne ocieplone są wdmuchiwaną izolacją z włókna drzewnego Steico Zell. Produkt ten charakteryzuje się wysoką gęstością (ok. 40 kg/m3), a tym samym dużą pojemnością cieplną.',
   },
   {
     key: 'customer-service',
