@@ -21,9 +21,9 @@ const AccordionItem = ({ title, description, index, isLastItem }: Props) => {
     <div className="flex-1 w-full">
       <div className="w-full">
         <div
-          className="flex flex-row items-center justify-between cursor-pointer"
+          className="flex flex-row gap-2 items-center justify-between cursor-pointer"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
-          <h4 className="min-w-max text-sm lg:text-base xl:text-lg text-gray-950/90">
+          <h4 className="w-full text-sm lg:text-base xl:text-lg text-gray-950/90">
             {convertIndexToNumber(index)}. {title}
           </h4>
           <motion.div
