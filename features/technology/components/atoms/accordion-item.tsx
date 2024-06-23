@@ -26,23 +26,24 @@ const AccordionItem = ({ title, description, index, isLastItem }: Props) => {
           <h4 className="w-full basis-4/5 text-sm lg:text-base xl:text-lg text-gray-950/90">
             {convertIndexToNumber(index)}. {title}
           </h4>
-          <motion.div
-            animate={isOpen ? 'show' : 'hide'}
-            className="basis-1/5 flex justify-end"
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: 180,
-              },
-            }}>
-            {isOpen ? (
-              <MinusCircle size={24} className="min-w-max" />
-            ) : (
-              <PlusCircle size={24} className="min-w-max" />
-            )}
-          </motion.div>
+          <div className="basis-1/5 flex justify-end">
+            <motion.div
+              animate={isOpen ? 'show' : 'hide'}
+              variants={{
+                hide: {
+                  rotate: 0,
+                },
+                show: {
+                  rotate: 180,
+                },
+              }}>
+              {isOpen ? (
+                <MinusCircle size={24} className="min-w-max" />
+              ) : (
+                <PlusCircle size={24} className="min-w-max" />
+              )}
+            </motion.div>
+          </div>
         </div>
         <AnimatePresence initial={false}>
           {isOpen && (

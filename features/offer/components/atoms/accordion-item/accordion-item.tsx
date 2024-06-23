@@ -24,25 +24,27 @@ const AccordionItem = ({ title, description, data }: Props) => {
         <div
           className="flex flex-row items-center gap-2 justify-between py-2"
           onClick={() => setIsOpen(prevIsOpen => !prevIsOpen)}>
-          <div className="flex flex-col">
-            <h4 className="w-full text-lg font-medium lg:text-2xl">{title}</h4>
+          <div className="flex flex-col basis-4/5">
+            <h4 className=" w-full text-lg font-medium lg:text-2xl">{title}</h4>
             <p className="text-sm lg:text-base">{description}zł</p>
           </div>
-          <motion.div
-            animate={isOpen ? 'show' : 'hide'}
-            variants={{
-              hide: {
-                rotate: 0,
-              },
-              show: {
-                rotate: 180,
-              },
-            }}>
-            <ChevronDown size={24} className="min-w-max" />
-          </motion.div>
+          <div className="basis-1/5 flex justify-end">
+            <motion.div
+              animate={isOpen ? 'show' : 'hide'}
+              variants={{
+                hide: {
+                  rotate: 0,
+                },
+                show: {
+                  rotate: 180,
+                },
+              }}>
+              <ChevronDown size={24} className="min-w-max" />
+            </motion.div>
+          </div>
         </div>
         <AnimatePresence initial={false}>
-          {isOpen && (
+          {isOpen ? (
             <motion.div
               initial="collapsed"
               animate="open"
@@ -57,16 +59,18 @@ const AccordionItem = ({ title, description, data }: Props) => {
                 <div
                   key={row.id}
                   className={`flex items-center justify-between py-2 pl-2 pr-4 gap-2 mb-2 ${index % 2 === 0 ? 'bg-gray-200' : 'bg-white'}`}>
-                  <p className="text-sm">{row.title}</p>
-                  {row.value ? (
-                    <CheckCircle2 size={22} className="min-w-max" />
-                  ) : (
-                    <Minus size={22} className="min-w-max" />
-                  )}
+                  <p className="text-sm flex basis-4/5">{row.title}</p>
+                  <div className="basis-1/5 flex justify-end">
+                    {row.value ? (
+                      <CheckCircle2 size={22} className="min-w-max" />
+                    ) : (
+                      <Minus size={22} className="min-w-max" />
+                    )}
+                  </div>
                 </div>
               ))}
             </motion.div>
-          )}
+          ) : null}
         </AnimatePresence>
       </div>
       <div className="w-full my-2 h-px bg-gray-200" />
