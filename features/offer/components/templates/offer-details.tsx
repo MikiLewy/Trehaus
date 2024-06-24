@@ -7,6 +7,7 @@ import { DATA_NOT_FOUND_ERROR } from '@/constants/data-not-found-error';
 
 import { useOffer } from '../../hooks/api/offer/use-offer';
 import ProjectDescription from '../molecules/project-description/project-description';
+import ProjectDisclaimer from '../molecules/project-disclaimer/project-disclaimer';
 import CompletionStandardsSection from '../organisms/offer/completion-standards-section/completion-standards-section';
 import GroundFloorPlan from '../organisms/offer/ground-floor-plan/ground-floor-plan';
 import ProjectDetailsSection from '../organisms/offer/project-details-section/project-details-section';
@@ -32,6 +33,7 @@ const OfferDetails = ({ slug }: Props) => {
       <ProjectDescription slug={slug} />
       <GroundFloorPlan slug={slug} />
       <CompletionStandardsSection slug={slug} />
+      <ProjectDisclaimer />
     </>
   );
 };

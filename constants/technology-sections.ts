@@ -1,20 +1,5 @@
-import dachDomuParterowego from '../public/technology/dach-domu-parterowego.png';
-import dachDomuUzytkowego from '../public/technology/dach-domu-uzytkowego.png';
+import dachDomuUzytkowego from '../public/technology/dach.png';
 import sciana from '../public/technology/sciana.png';
-import technology from '../public/technology/technology.png';
-
-export const technologySections = [
-  {
-    key: 'about',
-    title: 'Technologia',
-    description:
-      'Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie. Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.Wszystko co musisz wiedzieć o naszej ofercie. Nie znalazłeś odpowiedzi na swoje pytanie? Nic nie szkodzi, skontaktuj się z nami a my odpowiemy na każde nurtujące Cię pytanie.',
-    img: {
-      static: technology,
-      alt: 'Szkielet dachu drewnianego',
-    },
-  },
-];
 
 export const technologyConstructionDetailsSections = [
   {
@@ -29,25 +14,25 @@ export const technologyConstructionDetailsSections = [
         key: 'layer-of-finish',
         title: 'Warstwa wykończenia',
         description:
-          'Do wykończenia wnętrz mamy dwie opcje do wyboru. Pierwsza opcja to płyty gipsowe Rigips 4 pro o podwyższonej odporności ogniowej, szpachlowane do standardu Q2 lub opcjonalnie Q4. Druga opcja to wykończenie panelami drewnianymi. W ofercie mamy kilka rodzajów do wyboru. W pomieszczeniach o podwyższonej wilgotności stosujemy płyty o odpowiednim przeznaczeniu.',
+          'Płyta gipsowa 12,5 mm szpachlowana do standardu Q1 lub opcjonalnie do standardu Q3. Możliwe jest również wykończenie ściany panelem drewnianym.',
       },
       {
-        key: 'panel-mfp',
-        title: 'Płyta MFP 10mm',
+        key: 'construction-plate',
+        title: 'Płyta konstrukcyjna',
         description:
-          'Jako wzmocnienie pod płyty gipsowe używamy płyty MFP. pozwala ona na większą swobodę montażu osprzętu na ścianach oraz wzmacnia konstrukcję. W przypadku wykończenia panelami drewnianymi płyty nie stosujemy.',
+          'Jako wzmocnienie pod płyty gipsowe używamy płyty OSB3 12mm. pozwala ona na większą swobodę montażu osprzętu na ścianach oraz wzmacnia konstrukcję. W przypadku wykończenia panelami drewnianymi płyty nie stosujemy.',
       },
       {
         key: 'installation-grate',
-        title: 'Ruszt instalacyjny z izolacją',
+        title: 'Ruszt instalacyjny',
         description:
-          'Ruszt do bezpiecznego przeprowadzania instalacji ma wymiary 45x45mm lub więcej w przypadkach kiedy jest to konieczne do przeprowadzenia większych instalacji. Ruszt dodatkowo wypełniony jest wełną drzewną 40mm, która działa jako likwidacja mostków cieplnych.',
+          'Ruszt do bezpiecznego przeprowadzania instalacji elektrycznej oraz wodnej ma wymiary 38x63 mm. Zapewnia szczelność paroizolacji.',
       },
       {
         key: 'steam-insulation',
-        title: 'Paroizolacja Siga',
+        title: 'Paroizolacja',
         description:
-          'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Siga. W pomieszczeniach o podwyższonej wilgotności stosujemy produkty o zmiennym oporze dyfuzyjnym. Folie paroizolacyjne są uszczelniane taśmami Siga, dzięki czemu zyskujemy trwałe połączenie.',
+          'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Isover stopair oraz taśmy Eurovent lub Steico. Zaletą zastosowania tej membrany jest jej przezroczystość, dzięki czemu mamy pewność, że przegroda zewnętrzna została poprawnie zadmuchana.',
       },
       {
         key: 'wall-covering',
@@ -56,14 +41,14 @@ export const technologyConstructionDetailsSections = [
           'Do stężenia ścian używamy płyty MFP 15mm. Jako zastosowanie od wewnątrz przegrody płyty MFP otwartość dyfuzyjna ściany nie jest zaburzona. Można ją stosować od wewnątrz. Zakazane jest stosowanie płyty OSB I MFP od zewnętrznej strony konstrukcji!',
       },
       {
-        key: 'wall-constructions',
-        title: 'Konstrukcja ściany',
+        key: 'constructions',
+        title: 'Konstrukcja',
         description:
-          'Jako główna konstrukcja ściany stosujemy drewno suszone o przekroju 45x245mm lub dla budynków pasywnych belki dwuteowe. Drewno jest po obróbce termicznej i posiada certyfikat wytrzymałości c24.',
+          'Jako główna konstrukcja ściany stosujemy drewno suszone c24 o przekroju 45x145mm lub 45x195mm.',
       },
       {
         key: 'wood-fiber',
-        title: 'Izolacja steico zell z włókna drzewnego',
+        title: 'Izolacja z wełny drzewnej',
         description:
           'Przestrzeń konstrukcji ścian izolujemy metodą wdmuchiwania, dzięki czemu likwidujemy mostki termiczne mogące powstać przy tradycyjnym układaniu materiałów. Włókna drzewne są naturalnym produktem przyjaznym alergikom. Wełny drzewne mają bardzo dużą pojemność cieplną, dzięki czemu poddasza nie przegrzewają się tak szybko jak w przypadku wełny mineralnej.',
       },
@@ -71,7 +56,7 @@ export const technologyConstructionDetailsSections = [
         key: 'open-plate',
         title: 'Płyty otwarte dyfuzyjnie',
         description:
-          'Na konstrukcji stosujemy płyty poszycia z wełny drzewnej o grubości 60mm. Płyty posiadają krawędzie pióro-wpust, dzięki czemu chronią przed wiatrem. Dodatkowo w miejscach okien stosujemy ochronę w postaci wiatroizolacji SIGA.',
+          'Na konstrukcji stosujemy płyty poszycia z wełny drzewnej o grubości 60mm. Płyty posiadają krawędzie pióro-wpust, dzięki czemu chronią przed wiatrem.',
       },
       {
         key: 'finishing',
@@ -93,119 +78,52 @@ export const technologyConstructionDetailsSections = [
         key: 'layer-of-finish',
         title: 'Warstwa wykończenia',
         description:
-          'Do wykończenia wnętrz mamy dwie opcje do wyboru. Pierwsza opcja to płyty gipsowe Rigips 4 pro o podwyższonej odporności ogniowej, szpachlowane do standardu Q2 lub opcjonalnie Q4. Druga opcja to wykończenie panelami drewnianymi. W ofercie mamy kilka rodzajów do wyboru. W pomieszczeniach o podwyższonej wilgotności stosujemy płyty o odpowiednim przeznaczeniu.',
+          'Do wykończenia wnętrz mamy dwie opcje do wyboru. Pierwsza opcja to płyty gipsowe 12,5 mm, szpachlowane do standardu Q1 lub opcjonalnie Q3. Druga opcja to wykończenie panelami drewnianymi. W ofercie mamy kilka rodzajów do wyboru. W pomieszczeniach o podwyższonej wilgotności stosujemy płyty o odpowiednim przeznaczeniu.',
       },
       {
         key: 'wooden-rack',
-        title: 'Stelaż z łat drewnianych',
+        title: 'Ruszt instalacyjny (stelaż)',
         description:
-          'Stelaż pod ostateczne wykończenie wykonujemy z drewna suszonego komorowo, dzięki czemu mniej pracuje. Rozstaw łat to 35cm. Ruszt jest poziomowany do ostateczne wykończenie. Dla paneli drewnianych, które na życzenie inwestora mają mieć układ poziomy wykonujemy dodatkowy ruszt krzyżowy.',
+          'Stelaż pod ostateczne wykończenie wykonujemy z drewna suszonego komorowo C16, dzięki czemu mniej pracuje, lub w przypadku konieczności znacznego obniżenia sufitu, np. pod instalację rekuperacji, stosujemy stelaż stalowy.',
       },
       {
         key: 'steam-insulation',
-        title: 'Paroizolacja Siga',
+        title: 'Paroizolacja',
         description:
-          'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Siga. W pomieszczeniach o podwyższonej wilgotności stosujemy produkty o zmiennym oporze dyfuzyjnym. Folie paroizolacyjne są uszczelniane taśmami Siga, dzięki czemu zyskujemy trwałe połączenie.',
+          'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Isover stopair oraz taśmy Eurovent lub Steico. Zaletą zastosowania tej membrany jest jej przezroczystość, dzięki czemu mamy pewność, że przegroda zewnętrzna została poprawnie zadmuchana.',
       },
       {
-        key: 'system-rafters',
-        title: 'Krokwie w systemie MITEK lub belki dwuteowe',
+        key: 'constructions',
+        title: 'Kontstrukcja',
         description:
-          'Konstrukcje dachowe wykonujemy z drewna suszonego komorowo o wytrzymałości c24. Dzięki zastosowaniu systemu Mitek dla krokwi jesteśmy w stanie uzyskać pasy wysokości 365mm. Dla dachów o wyższych wymiarach możemy zastosować belki dwuteowe.',
+          'Na krokwie przeważnie stosujemy drewno c24 o przekroju 45x195 mm o odpowiednim zagęszczeniu. Na podciągi, krawężnice itd. Przeważnie stosujemy drewno KVH, lub BSH. Wszystko zależy od przekroju.',
       },
       {
         key: 'wood-fiber',
-        title: 'Izolacja steico zell z włókna drzewnego',
+        title: 'Izolacja z wełny drzewnej',
         description:
-          'Przestrzeń między krokwiami izolujemy nadmuchową metodą, dzięki czemu likwidujemy mostki termiczne mogące powstać przy tradycyjnym układaniu materiałów. Włókna drzewne są naturalnym produktem przyjaznym alergikom. Wełny drzewne mają bardzo dużą pojemność cieplną, dzięki czemu poddasza nie przegrzewają się tak szybko jak w przypadku wełny mineralnej.',
+          'Przestrzeń konstrukcji ścian izolujemy metodą wdmuchiwania, dzięki czemu likwidujemy mostki termiczne mogące powstać przy tradycyjnym układaniu materiałów. Włókna drzewne są naturalnym produktem przyjaznym alergikom. Wełny drzewne mają bardzo dużą pojemność cieplną, dzięki czemu poddasza nie przegrzewają się tak szybko jak w przypadku wełny mineralnej.',
       },
       {
         key: 'fiber-roofing',
-        title: 'Izolacja nakrokwiowa',
+        title: 'Płyta nakrokwiowa',
         description:
-          'Dla likwidacji mostków termicznych stosujemy izolację na krokwiową, która poprawia parametry dachu i jest dobrym wsparciem do metody nadmuchowej. Płyty są otwarte dyfuzyjnie, dzięki czemu w swobodny sposób pozwalają na migrację pary wodnej.',
+          'Płyta Steico uniwersal 35 mm układana na pióro-wpust likwiduje wszelkie mostki termiczne oraz zapewnia szczelność budynku.',
       },
       {
         key: 'counterfoil',
-        title: 'Kontrłata',
-        description:
-          'Kontrłaty pod spodem mają specjalną uszczelkę. Mocowanie kontrłat wykonujemy z użyciem wkrętów.',
+        title: 'Kontrłaty',
+        description: 'Drewno o przekroju 20x40 mm',
       },
       {
         key: 'foil',
-        title: 'Łata',
-        description:
-          'Łaty na dachu mają rozstawy określone pod dane pokrycie dachowe. mocowane są za pomocą gwoździ pierścieniowych.',
+        title: 'Łaty',
+        description: 'Drewno C16 o przekroju 38x63 mm',
       },
       {
         key: 'roofing',
-        title: 'Pokrycie dachowe',
-        description:
-          'Dla ostatecznej warstwy dachowej proponujemy blachodachówki producenta RUUKKI lub dachówki BRASS. Wzory oraz kolory pozostają do wyboru inwestora. Dla dachów płaskich ostatecznym wykończeniem jest EPDM.',
-      },
-    ],
-  },
-  {
-    key: 'single-storey-house-roof',
-    title: 'Dach domu parterowego',
-    img: {
-      static: dachDomuParterowego,
-      alt: 'Dach domu parterowego',
-    },
-    details: [
-      {
-        key: 'layer-of-finish',
-        title: 'Warstwa wykończenia na ruszcie drewnianym',
-        description:
-          'Do wykończenia wnętrz mamy dwie opcje do wyboru. Pierwsza opcja to płyty gipsowe Rigips 4 pro o podwyższonej odporności ogniowej, szpachlowane do standardu Q2 lub opcjonalnie Q4. Druga opcja to wykończenie panelami drewnianymi. W ofercie mamy kilka rodzajów do wyboru. W pomieszczeniach o podwyższonej wilgotności stosujemy płyty o odpowiednim przeznaczeniu.',
-      },
-      {
-        key: 'steam-insulation',
-        title: 'Paroizolacja Siga',
-        description:
-          'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Siga. W pomieszczeniach o podwyższonej wilgotności stosujemy produkty o zmiennym oporze dyfuzyjnym. Folie paroizolacyjne są uszczelniane taśmami Siga, dzięki czemu zyskujemy trwałe połączenie.',
-      },
-      {
-        key: 'system-rafters',
-        title: 'Wiązary dachowe w systemie MI-TEK',
-        description:
-          'Konstrukcje dachowe wykonujemy z wiązarów drewnianych. Drewno jest suszone komorowo i heblowane. Wiązary są idealnym rozwiązaniem do domów szkieletowych, ponieważ zapobiegają rozpychaniu budynku. W wiązarach można wykonać pomieszczenie strychowe na różne drobiazgi.',
-      },
-      {
-        key: 'wood-fiber',
-        title: 'Izolacja steico zell z włókna drzewnego',
-        description:
-          'Przestrzeń w strefie wiązarów izolujemy naturalnym włóknem drzewnym metodą luźnego zasypu. Ilość zasypu oscyluje w granicach 450-500mm. Taki zabieg pozwala nam uzyskać parametry dla dachu nawet na poziomie pasywnym. Materiał izolacyjny jest przyjazny alergikom.',
-      },
-      {
-        key: 'roof-sheathing',
-        title: 'Poszycie dachowe',
-        description:
-          'Dach jako stężenie otrzymuje płyty MFP grubości 18mm. Takie rozwiązanie idealnie stęża konstrukcję dachu oraz jest podbudową do membrany.',
-      },
-      {
-        key: 'membrane-SIGA',
-        title: 'Membrana SIGA',
-        description:
-          'Na poszyciu dachu stosujemy membrany Siga, dzięki czemu ewentualne skropliny oraz śnieg nie dostanie się do izolacji.',
-      },
-      {
-        key: 'counterfoil',
-        title: 'Kontrłata',
-        description:
-          'Kontrłaty pod spodem mają specjalną uszczelkę. Mocowanie kontrłat wykonujemy z użyciem wkrętów.',
-      },
-      {
-        key: 'foil',
-        title: 'Łata',
-        description:
-          'Łaty na dachu mają rozstawy określone pod dane pokrycie dachowe. mocowane są za pomocą gwoździ pierścieniowych.',
-      },
-      {
-        key: 'roofing',
-        title: 'Pokrycie dachowe',
-        description:
-          'Dla ostatecznej warstwy dachowej proponujemy blachodachówki producenta RUUKKI lub dachówki BRASS. Wzory oraz kolory pozostają do wyboru inwestora. Dla dachów płaskich ostatecznym wykończeniem jest EPDM.',
+        title: 'Poszycie dachu',
+        description: 'Wedle upodobań inwestora.',
       },
     ],
   },
