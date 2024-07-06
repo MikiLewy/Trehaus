@@ -1,8 +1,3 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from '@tanstack/react-query';
 import { Metadata } from 'next';
 
 import GoBackButton from '@/components/atoms/go-back-button/go-back-button';
@@ -10,8 +5,9 @@ import {
   fetchOfferDetails,
   fetchOffersListings,
 } from '@/features/offer/api/lib/offer';
+import { prefetchOfferDetails } from '@/features/offer/api/lib/offer.prefetch';
 import OfferDetails from '@/features/offer/components/templates/offer-details';
-import { usePrefetchOffer } from '@/features/offer/hooks/api/offer/use-prefetch-offer';
+import HydrationBoundaryProvider from '@/providers/hydration-boundary-provider';
 
 interface Props {
   params: { slug: string };
@@ -35,16 +31,15 @@ export async function generateMetadata({
 }
 
 const OfferDetailsPage = async ({ params }: Props) => {
-  const queryClient = new QueryClient();
-
-  await usePrefetchOffer(params.slug);
-
   return (
     <main className="content-container my-8 lg:my-10 flex flex-col gap-6 lg:gap-8">
       <GoBackButton href="/oferta" />
-      <HydrationBoundary state={dehydrate(queryClient)}>
+      <HydrationBoundaryProvider
+        prefetchDataFunctions={[
+          queryClient => prefetchOfferDetails(queryClient, params.slug),
+        ]}>
         <OfferDetails slug={params.slug} />
-      </HydrationBoundary>
+      </HydrationBoundaryProvider>
     </main>
   );
 };

@@ -3,7 +3,7 @@
 import CardSkeleton from '@/components/atoms/card-skeleton/card-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 
-import { useRealizations } from '../../hooks/api/realizations/use-realizations';
+import { useRealizations } from '../../hooks/query/use-realizations';
 import RealizationCard from '../atoms/realization-card';
 
 const Realizations = () => {

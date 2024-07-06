@@ -7,7 +7,7 @@ import CardSkeleton from '@/components/atoms/card-skeleton/card-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
-import { useRealization } from '../../hooks/api/realizations/use-realization';
+import { useRealization } from '../../hooks/query/use-realization';
 
 interface Props {
   slug: string;

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
-import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { useOffer } from '@/features/offer/hooks/query/use-offer';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
 interface Props {

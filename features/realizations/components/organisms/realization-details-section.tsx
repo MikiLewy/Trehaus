@@ -6,7 +6,7 @@ import SomethingWentWrong from '@/components/atoms/something-went-wrong/somethin
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import Typography from '@/components/atoms/typography/typography';
 
-import { useRealization } from '../../hooks/api/realizations/use-realization';
+import { useRealization } from '../../hooks/query/use-realization';
 
 interface Props {
   slug: string;

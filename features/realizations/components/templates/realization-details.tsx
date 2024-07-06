@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { DATA_NOT_FOUND_ERROR } from '@/constants/data-not-found-error';
 
-import { useRealization } from '../../hooks/api/realizations/use-realization';
+import { useRealization } from '../../hooks/query/use-realization';
 import RealizationAttachmentsGallery from '../organisms/realization-attachments-gallery';
 import RealizationDetailsSection from '../organisms/realization-details-section';
 
