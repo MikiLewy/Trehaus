@@ -6,7 +6,7 @@ import SomethingWentWrong from '@/components/atoms/something-went-wrong/somethin
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import Typography from '@/components/atoms/typography/typography';
 
-import { useRealization } from '../../hooks/api/realizations/use-realization';
+import { useRealization } from '../../hooks/query/use-realization';
 
 interface Props {
   slug: string;
@@ -41,7 +41,11 @@ const RealizationDetailsSection = ({ slug }: Props) => {
           renderNode: {
             [INLINES.HYPERLINK]: ({ data }: { data: NodeData }, children) => (
               <a
-                href={`${window.location.origin}${data.uri}`}
+                href={
+                  typeof window !== 'undefined'
+                    ? `${window.location.origin}${data.uri}`
+                    : ''
+                }
                 className="text-blue-500 hover:underline">
                 {children}
               </a>

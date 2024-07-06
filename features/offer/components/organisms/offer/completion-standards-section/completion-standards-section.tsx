@@ -6,7 +6,7 @@ import SomethingWentWrong from '@/components/atoms/something-went-wrong/somethin
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import Typography from '@/components/atoms/typography/typography';
 import { tableData } from '@/features/offer/data/table';
-import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { useOffer } from '@/features/offer/hooks/query/use-offer';
 
 import Accordion from '../../../molecules/accordion/accordion';
 

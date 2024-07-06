@@ -5,7 +5,7 @@ import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import Typography from '@/components/atoms/typography/typography';
-import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { useOffer } from '@/features/offer/hooks/query/use-offer';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
 interface Props {

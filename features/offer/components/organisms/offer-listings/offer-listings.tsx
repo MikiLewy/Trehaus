@@ -3,7 +3,7 @@
 import CardSkeleton from '@/components/atoms/card-skeleton/card-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import OfferCard from '@/features/offer/components/atoms/offer-card/offer-card';
-import { useOffersListings } from '@/features/offer/hooks/api/offer/use-offers-listings';
+import { useOffersListings } from '@/features/offer/hooks/query/use-offers-listings';
 
 const OfferListings = () => {
   const { data, isLoading } = useOffersListings();
