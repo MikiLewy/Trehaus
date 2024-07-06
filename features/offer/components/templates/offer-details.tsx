@@ -30,8 +30,12 @@ const OfferDetails = ({ slug }: Props) => {
   return (
     <>
       <ProjectDetailsSection slug={slug} />
-      <ProjectDescription slug={slug} />
-      <GroundFloorPlan slug={slug} />
+      {data?.externalUrlToOfferDetails ? null : (
+        <>
+          <ProjectDescription slug={slug} />
+          <GroundFloorPlan slug={slug} />
+        </>
+      )}
       <CompletionStandardsSection slug={slug} />
       <ProjectDisclaimer />
     </>

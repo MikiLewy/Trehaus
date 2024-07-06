@@ -15,4 +15,5 @@ export interface Offer {
   finishingStandards: KeyValuePair[];
   groundFloorImage: EntryFields.AssetLink;
   groundFloorDetails: KeyValuePair[];
+  externalUrlToOfferDetails: EntryFields.Text;
 }
