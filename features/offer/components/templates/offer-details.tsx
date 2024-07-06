@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { DATA_NOT_FOUND_ERROR } from '@/constants/data-not-found-error';
 
-import { useOffer } from '../../hooks/api/offer/use-offer';
+import { useOffer } from '../../hooks/query/use-offer';
 import ProjectDescription from '../molecules/project-description/project-description';
 import ProjectDisclaimer from '../molecules/project-disclaimer/project-disclaimer';
 import CompletionStandardsSection from '../organisms/offer/completion-standards-section/completion-standards-section';

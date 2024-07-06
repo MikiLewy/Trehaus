@@ -5,7 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
 import Typography from '@/components/atoms/typography/typography';
-import { useOffer } from '@/features/offer/hooks/api/offer/use-offer';
+import { useOffer } from '@/features/offer/hooks/query/use-offer';
 
 interface Props {
   slug: string;

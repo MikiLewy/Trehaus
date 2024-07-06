@@ -1,13 +1,9 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from '@tanstack/react-query';
 import { Metadata } from 'next';
 
 import PageHeader from '@/components/atoms/page-header/page-header';
+import { prefetchOffersListings } from '@/features/offer/api/lib/offer.prefetch';
 import OfferListings from '@/features/offer/components/organisms/offer-listings/offer-listings';
-import { usePrefetchOffersListings } from '@/features/offer/hooks/api/offer/use-prefetch-offers-listings';
+import HydrationBoundaryProvider from '@/providers/hydration-boundary-provider';
 
 export const metadata: Metadata = {
   title: 'Oferta',
@@ -16,16 +12,15 @@ export const metadata: Metadata = {
 };
 
 const Offer = async () => {
-  const queryClient = new QueryClient();
-
-  await usePrefetchOffersListings();
-
   return (
     <main>
       <PageHeader>Oferta</PageHeader>
-      <HydrationBoundary state={dehydrate(queryClient)}>
+      <HydrationBoundaryProvider
+        prefetchDataFunctions={[
+          queryClient => prefetchOffersListings(queryClient),
+        ]}>
         <OfferListings />
-      </HydrationBoundary>
+      </HydrationBoundaryProvider>
     </main>
   );
 };

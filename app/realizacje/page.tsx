@@ -1,13 +1,9 @@
-import {
-  dehydrate,
-  HydrationBoundary,
-  QueryClient,
-} from '@tanstack/react-query';
 import { Metadata } from 'next';
 
 import PageHeader from '@/components/atoms/page-header/page-header';
+import { prefetchRealizations } from '@/features/realizations/api/lib/realizations.prefetch';
 import Realizations from '@/features/realizations/components/organisms/realizations';
-import { usePrefetchRealizations } from '@/features/realizations/hooks/api/realizations/use-prefetch-realizations';
+import HydrationBoundaryProvider from '@/providers/hydration-boundary-provider';
 
 export const metadata: Metadata = {
   title: 'Realizacje',
@@ -16,16 +12,15 @@ export const metadata: Metadata = {
 };
 
 const RealizationsPage = async () => {
-  const queryClient = new QueryClient();
-
-  await usePrefetchRealizations();
-
   return (
     <main>
       <PageHeader>Nasze realizacje</PageHeader>
-      <HydrationBoundary state={dehydrate(queryClient)}>
+      <HydrationBoundaryProvider
+        prefetchDataFunctions={[
+          queryClient => prefetchRealizations(queryClient),
+        ]}>
         <Realizations />
-      </HydrationBoundary>
+      </HydrationBoundaryProvider>
     </main>
   );
 };
