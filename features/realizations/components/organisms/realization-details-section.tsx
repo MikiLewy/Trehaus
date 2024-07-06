@@ -41,7 +41,11 @@ const RealizationDetailsSection = ({ slug }: Props) => {
           renderNode: {
             [INLINES.HYPERLINK]: ({ data }: { data: NodeData }, children) => (
               <a
-                href={`${window.location.origin}${data.uri}`}
+                href={
+                  typeof window !== 'undefined'
+                    ? `${window.location.origin}${data.uri}`
+                    : ''
+                }
                 className="text-blue-500 hover:underline">
                 {children}
               </a>
