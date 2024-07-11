@@ -35,12 +35,6 @@ export const technologyConstructionDetailsSections = [
           'Do zapewnienia systemu szczelności budynków stosujemy produkty marki Isover stopair oraz taśmy Eurovent lub Steico. Zaletą zastosowania tej membrany jest jej przezroczystość, dzięki czemu mamy pewność, że przegroda zewnętrzna została poprawnie zadmuchana.',
       },
       {
-        key: 'wall-covering',
-        title: 'Poszycie ściany',
-        description:
-          'Do stężenia ścian używamy płyty MFP 15mm. Jako zastosowanie od wewnątrz przegrody płyty MFP otwartość dyfuzyjna ściany nie jest zaburzona. Można ją stosować od wewnątrz. Zakazane jest stosowanie płyty OSB I MFP od zewnętrznej strony konstrukcji!',
-      },
-      {
         key: 'constructions',
         title: 'Konstrukcja',
         description:
