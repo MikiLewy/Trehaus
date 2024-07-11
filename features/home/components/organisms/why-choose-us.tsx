@@ -25,7 +25,7 @@ const advantagesCard = [
     icon: Users,
     title: 'ELASTYCZNE PODEJŚCIE DO KLIENTA ORAZ JASNE ZASADY FINANSOWANIA.',
     description:
-      'Prócz oferty przedstawionej na stronie, jesteśmy w stanie wybudować każdy budynek w technologii szkieletowej wg zasad określonych w norweskim instytucie badań SINTEF. Doradzimy w wyborze wymarzonego domu, uwzględniając warunki panujące na działce inwestora (wystawa działki, sąsiedztwo, warunki terenowe). Niewątpliwym atutem budowy domu przez naszą firmę jest sposób finansowania. Inwestora płaci w całości za dany etap budowy (stan surowy otwarty, płyta fundamentowa, itd.) dopiero po faktycznym jego wykonaniu. Dzięki temu inwestor nie ponosi żadnego ryzyka, a jego interes jest w pełni chroniony. Ponadto przy podpisywaniu umowy nie ma konieczności wpłacania żadnych zaliczek.',
+      'Prócz oferty przedstawionej na stronie, jesteśmy w stanie wybudować każdy budynek w technologii szkieletowej wg zasad określonych w norweskim instytucie badań SINTEF. Doradzimy w wyborze wymarzonego domu, uwzględniając warunki panujące na działce inwestora (wystawa działki, sąsiedztwo, warunki terenowe). Niewątpliwym atutem budowy domu przez naszą firmę jest sposób finansowania. Inwestor płaci w całości za dany etap budowy (stan surowy otwarty, płyta fundamentowa, itd.) dopiero po faktycznym jego wykonaniu. Dzięki temu inwestor nie ponosi żadnego ryzyka, a jego interes jest w pełni chroniony. Ponadto przy podpisywaniu umowy nie ma konieczności wpłacania żadnych zaliczek.',
   },
 ];
 
