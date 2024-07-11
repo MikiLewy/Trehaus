@@ -23,7 +23,7 @@ const ConstructionDetailSectionItem = ({
   direction,
 }: Props) => {
   return (
-    <section className="flex flex-col items-center sm:flex-row sm:justify-between gap-6 md:gap-10 lg:gap-20 ">
+    <section className="flex flex-col items-start sm:flex-row sm:justify-between gap-6 md:gap-10 lg:gap-20 ">
       <div className="flex flex-col gap-4 lg:gap-6  w-full sm:basis-1/2   ">
         <Typography variant="h3" className="font-semibold">
           {title}
@@ -41,7 +41,7 @@ const ConstructionDetailSectionItem = ({
         </div>
       </div>
       <div
-        className={`sm:basis-1/2 xl:basis-[40%] ${direction === 'left' ? 'sm:order-1' : 'sm:-order-1'}`}>
+        className={`sm:basis-1/2 sm:mt-20 xl:basis-[40%] ${direction === 'left' ? 'sm:order-1' : 'sm:-order-1'}`}>
         <Image
           src={img.static}
           draggable={false}

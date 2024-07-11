@@ -39,7 +39,7 @@ export const tableData = [
   {
     id: 5,
     title:
-      'Szczelny Montaż okien przy użyciu taśm Ilbruck (Okna 3 – szybowe na ciepłym 82 mm profilu Veka)',
+      'Montaż stolarki okiennej (Okna 3 – szybowe na ciepłym 82 mm profilu Veka)',
     standards: {
       basic: true,
       plus: true,
