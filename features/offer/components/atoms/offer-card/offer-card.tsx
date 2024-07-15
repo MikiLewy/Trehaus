@@ -1,5 +1,4 @@
-import Image from 'next/image';
-
+import ContentfulImage from '@/components/atoms/contentful-image/contentful-image';
 import Typography from '@/components/atoms/typography/typography';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
@@ -25,7 +24,7 @@ const OfferCard = ({
 }: Props) => {
   return (
     <div className="relative flex flex-col gap-2 rounded-md bg-gray-50 overflow-hidden min-h-[500px] ">
-      <Image
+      <ContentfulImage
         src={createHttpsUrl(img.src)}
         alt={img.alt}
         loading="lazy"

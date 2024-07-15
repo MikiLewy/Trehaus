@@ -81,7 +81,11 @@ const ProjectDetails = ({ slug }: Props) => {
             {realizationHref ? (
               <Button
                 variant="outlined"
-                href={`/realizacje/${realizationHref}`}>
+                href={
+                  typeof window !== 'undefined'
+                    ? `${window.location.origin}/realizacje/${realizationHref}`
+                    : ''
+                }>
                 Zobacz realizację
               </Button>
             ) : null}

@@ -34,7 +34,7 @@ const OfferListings = () => {
             key={slug}
             title={title}
             description={shortDescription}
-            buttonHref={`oferta/${slug}`}
+            buttonHref={slug}
             img={{
               src: (mainImage.fields.file?.url as string) ?? '',
               alt: (mainImage.fields.title as string) ?? '',

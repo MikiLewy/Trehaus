@@ -1,9 +1,9 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
+import ContentfulImage from '@/components/atoms/contentful-image/contentful-image';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { useOffer } from '@/features/offer/hooks/query/use-offer';
@@ -37,7 +37,7 @@ const PhotosGallery = ({ slug }: Props) => {
 
   return (
     <div>
-      <Image
+      <ContentfulImage
         src={createHttpsUrl(mainImage?.fields.file?.url as string)}
         alt={(mainImage?.fields.title as string) ?? 'główne zdjęcie projektu'}
         width={800}
@@ -53,7 +53,7 @@ const PhotosGallery = ({ slug }: Props) => {
             onClick={() => {
               setSelectedIndex(index + 1);
             }}>
-            <Image
+            <ContentfulImage
               src={createHttpsUrl(image.fields.file?.url as string)}
               alt={image.fields.title as string}
               className="relative inset-0 w-full h-full min-h-16 max-h-36 object-cover  hover:opacity-80"

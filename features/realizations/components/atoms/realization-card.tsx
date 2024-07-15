@@ -1,6 +1,5 @@
-import Image from 'next/image';
-
 import Button from '@/components/atoms/button/button';
+import ContentfulImage from '@/components/atoms/contentful-image/contentful-image';
 import Typography from '@/components/atoms/typography/typography';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
@@ -17,7 +16,7 @@ interface Props {
 const RealizationCard = ({ title, buttonHref, description, img }: Props) => {
   return (
     <div className="flex flex-col">
-      <Image
+      <ContentfulImage
         src={createHttpsUrl(img.src)}
         alt={img.alt}
         width={500}

@@ -1,6 +1,7 @@
 'use client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { INLINES, NodeData } from '@contentful/rich-text-types';
+import Link from 'next/link';
 
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
@@ -40,7 +41,7 @@ const RealizationDetailsSection = ({ slug }: Props) => {
         {documentToReactComponents(description, {
           renderNode: {
             [INLINES.HYPERLINK]: ({ data }: { data: NodeData }, children) => (
-              <a
+              <Link
                 href={
                   typeof window !== 'undefined'
                     ? `${window.location.origin}${data.uri}`
@@ -48,7 +49,7 @@ const RealizationDetailsSection = ({ slug }: Props) => {
                 }
                 className="text-blue-500 hover:underline">
                 {children}
-              </a>
+              </Link>
             ),
           },
         })}
