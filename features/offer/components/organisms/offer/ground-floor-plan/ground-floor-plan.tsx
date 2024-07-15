@@ -1,6 +1,6 @@
 'use client';
-import Image from 'next/image';
 
+import ContentfulImage from '@/components/atoms/contentful-image/contentful-image';
 import ImageSkeleton from '@/components/atoms/image-skeleton/image-skeleton';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import TextSkeleton from '@/components/atoms/text-skeleton/text-skeleton';
@@ -49,7 +49,7 @@ const GroundFloorPlan = ({ slug }: Props) => {
       </div>
       {groundFloorImage ? (
         <div className={`basis-full md:basis-3/5`}>
-          <Image
+          <ContentfulImage
             src={createHttpsUrl(groundFloorImage?.fields?.file?.url as string)}
             alt={groundFloorImage?.fields?.title as string}
             draggable={false}
