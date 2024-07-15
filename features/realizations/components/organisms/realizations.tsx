@@ -38,7 +38,7 @@ const Realizations = () => {
             src: (mainImage.fields.file?.url as string) ?? '',
             alt: (mainImage.fields.title as string) ?? '',
           }}
-          buttonHref={`realizacje/${slug}`}
+          buttonHref={slug}
         />
       ))}
     </section>

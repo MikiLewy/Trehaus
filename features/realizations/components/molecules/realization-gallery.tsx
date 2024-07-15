@@ -1,9 +1,9 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
 
 import AttachmentsGallery from '@/components/atoms/attachments-gallery/attachments-gallery';
 import CardSkeleton from '@/components/atoms/card-skeleton/card-skeleton';
+import ContentfulImage from '@/components/atoms/contentful-image/contentful-image';
 import SomethingWentWrong from '@/components/atoms/something-went-wrong/something-went-wrong';
 import { createHttpsUrl } from '@/utils/create-https-url';
 
@@ -47,10 +47,10 @@ const RealizationGallery = ({ slug }: Props) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       {transformedImages.map((image, index) => (
-        <Image
+        <ContentfulImage
           key={`${image.src}-${index}`}
           src={image.src}
-          alt={`Realizacja-${image?.alt}}`}
+          alt={`Realizacja-${image?.alt}`}
           onClick={() => {
             setSelectedIndex(index);
           }}

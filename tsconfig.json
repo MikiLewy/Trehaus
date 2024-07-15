@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,9 +23,13 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
-    "types": ["vitest/globals"]
+    "types": [
+      "vitest/globals"
+    ]
   },
   "include": [
     "next-env.d.ts",
@@ -29,7 +37,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts, vite.config.ts",
     ".next/types/**/*.ts",
-    "next.config.,js"
+    "next.config.,js",
+    "build/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
