@@ -13,14 +13,16 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Trehaus',
+    default:
+      'Trehaus - Budowa Domów Drewnianych | Konstrukcje Szkieletowe w Pomorskim',
     template: '%s | Trehaus',
   },
   description:
-    'Odkryj wyjątkowe domy drewniane o niepowtarzalnym designie. Nasza firma oferuje kompleksowe usługi budowy domów z drewna, połączone z pasją do tradycji i innowacji. Stwórz swój wymarzony dom razem z nami. Skontaktuj się już dziś! Ponad 20 lat doświadczenia nabytego w pracy w Skandynawii gwarantuje wysoką jakość naszych usług.',
+    'Odkryj wyjątkowe domy drewniane i konstrukcje szkieletowe o niepowtarzalnym designie w województwie pomorskim. Nasza firma oferuje kompleksowe usługi budowy domów z drewna, połączone z pasją do tradycji i innowacji. Stwórz swój wymarzony dom razem z nami. Skontaktuj się już dziś! Ponad 20 lat doświadczenia nabytego w pracy w Skandynawii gwarantuje wysoką jakość naszych usług.',
   twitter: {
     card: 'summary_large_image',
   },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL || ''),
 };
 
 export default function RootLayout({

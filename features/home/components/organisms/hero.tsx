@@ -14,7 +14,6 @@ const Hero = () => {
         fill
         priority
         placeholder="blur"
-        quality={100}
         className="absolute inset-0 object-cover w-full h-full 2xl:hidden"
       />
       <Image
@@ -23,14 +22,13 @@ const Hero = () => {
         fill
         priority
         placeholder="blur"
-        quality={100}
         className="hidden absolute inset-0 object-cover w-full h-full 2xl:block"
       />
       <div className="absolute inset-0 z-10 bg-black/65 " />
       <div className="relative z-20 content-container">
         <div className=" max-w-[500px] flex flex-col gap-2 lg:max-w-[800px]">
           <Typography variant="h1" className="text-white">
-            Budownictwo energooszczędne, konstrukcje drewniane
+            Budowa Domów Drewnianych i Konstrukcji Szkieletowych w Pomorskim
           </Typography>
           <Typography variant="p1" className="text-secondary-white">
             Ponad 20 lat doświadczenia przy budowie energooszczędnych domów

@@ -145,7 +145,7 @@ const ContactForm = () => {
                   sprzeciwu, jak również złożenia skargi do PUODO. Więcej
                   informacji w{' '}
                   <Link
-                    href={'/polityka_prywatności.pdf'}
+                    href={'/polityka_prywatnosci.pdf'}
                     rel="noopener noreferrer"
                     target="_blank"
                     className="underline">

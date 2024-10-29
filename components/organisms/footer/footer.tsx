@@ -83,7 +83,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Trehaus{' | '}
               <Link
                 className="hover:text-white/60"
-                href={'/polityka_prywatności.pdf'}
+                href={'/polityka_prywatnosci.pdf'}
                 rel="noopener noreferrer"
                 target="_blank">
                 Polityka prywatności
