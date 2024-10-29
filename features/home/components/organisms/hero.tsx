@@ -12,6 +12,8 @@ const Hero = () => {
         src={mobileHero}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
         fill
+        priority
+        loading="eager"
         placeholder="blur"
         className="absolute inset-0 object-cover w-full h-full 2xl:hidden"
       />
@@ -19,6 +21,8 @@ const Hero = () => {
         src={hero}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
         fill
+        priority
+        loading="eager"
         placeholder="blur"
         className="hidden absolute inset-0 object-cover w-full h-full 2xl:block"
       />
