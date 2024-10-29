@@ -1,29 +1,17 @@
-import Image from 'next/image';
-
 import Button from '@/components/atoms/button/button';
 import Typography from '@/components/atoms/typography/typography';
-import mobileHero from '@/public/hero-mobile.webp';
-import hero from '@/public/hero.webp';
 
 const Hero = () => {
   return (
     <header className="w-full h-[75vh] relative flex items-center justify-start">
-      <Image
-        src={mobileHero}
+      <img
+        src={'/hero-mobile.webp'}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
-        fill
-        priority
-        loading="eager"
-        placeholder="blur"
         className="absolute inset-0 object-cover w-full h-full 2xl:hidden"
       />
-      <Image
-        src={hero}
+      <img
+        src={'/hero.webp'}
         alt="Główne zdjęcie przedstawiające projekt domu Z87 w szkielecie drewnianym"
-        fill
-        priority
-        loading="eager"
-        placeholder="blur"
         className="hidden absolute inset-0 object-cover w-full h-full 2xl:block"
       />
       <div className="absolute inset-0 z-10 bg-black/65 " />
